@@ -19,6 +19,10 @@
       "via": "category",
       "collection": "page"
     },
+    "posts": {
+      "via": "category",
+      "collection": "post"
+    },
     "previous_": {
       "private": true,
       "type": "json"

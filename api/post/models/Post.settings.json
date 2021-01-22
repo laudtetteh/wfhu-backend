@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "posts",
+  "info": {
+    "name": "post",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": "",
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "cover": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "publish_at": {
+      "type": "datetime"
+    },
+    "reviews": {
+      "collection": "review",
+      "via": "post"
+    },
+    "category": {
+      "model": "category",
+      "via": "posts"
+    },
+    "seo": {
+      "type": "component",
+      "component": "post.seo",
+      "required": false,
+      "repeatable": false
+    },
+    "previous_": {
+      "private": true,
+      "type": "json"
+    },
+    "author_": {
+      "private": true,
+      "type": "json"
+    }
+  }
+}

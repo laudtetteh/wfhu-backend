@@ -674,6 +674,9 @@
                 "page": {
                   "type": "string"
                 },
+                "post": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -695,6 +698,12 @@
                 "type": "string"
               },
               "pages": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "posts": {
                 "type": "array",
                 "items": {
                   "type": "string"

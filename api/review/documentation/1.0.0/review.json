@@ -682,6 +682,58 @@
                 "type": "string"
               }
             }
+          },
+          "post": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "cover": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "publish_at": {
+                "type": "string"
+              },
+              "reviews": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "category": {
+                "type": "string"
+              },
+              "seo": {
+                "type": "component"
+              },
+              "previous_": {
+                "type": "object"
+              },
+              "author_": {
+                "type": "object"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -705,6 +757,9 @@
             }
           },
           "page": {
+            "type": "string"
+          },
+          "post": {
             "type": "string"
           },
           "created_by": {

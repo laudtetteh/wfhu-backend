@@ -33,6 +33,10 @@
     "page": {
       "via": "reviews",
       "model": "page"
+    },
+    "post": {
+      "via": "reviews",
+      "model": "post"
     }
   }
 }

@@ -605,6 +605,9 @@
               "page": {
                 "type": "string"
               },
+              "post": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
