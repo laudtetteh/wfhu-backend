@@ -1,7 +1,7 @@
 'use strict';
 
 /**
-* Lifecycle callbacks for the `Post` model.
+* Lifecycle callbacks for the `Page` model.
 * Read the documentation (https://strapi.io/documentation/v3.x/concepts/models.html#lifecycle-hooks)
 * to customize this model
 * Creating slugs: ttps://strapi.io/documentation/3.0.0-beta.x/guides/slug.html#create-attributes
@@ -14,13 +14,13 @@ const slugify = require('slugify');
 
 //     beforeSave: async (model, attrs, options) => {
 
-//         if (options.method === 'insert' && attrs.title) {
+//         if (options.method === 'insert' && attrs.name) {
 
-//             model.set('slug', slugify(attrs.title.toLowerCase()));
+//             model.set('slug', slugify(attrs.name.toLowerCase()));
 
-//         } else if (options.method === 'update' && attrs.title) {
+//         } else if (options.method === 'update' && attrs.name) {
 
-//             attrs.slug = slugify(attrs.title.toLowerCase());
+//             attrs.slug = slugify(attrs.name.toLowerCase());
 //         }
 //     },
 // };
@@ -32,13 +32,13 @@ const slugify = require('slugify');
 //    */
 //   lifecycles: {
 //     async beforeCreate(data) {
-//       if (data.title) {
-//        data.slug = slugify(data.title.toLowerCase());
+//       if (data.name) {
+//        data.slug = slugify(data.name.toLowerCase());
 //       }
 //     },
 //     async beforeUpdate(params, data) {
-//       if (data.title) {
-//         data.slug = slugify(data.title.toLowerCase());
+//       if (data.name) {
+//         data.slug = slugify(data.name.toLowerCase());
 //       }
 //     },
 //   },
@@ -49,8 +49,8 @@ module.exports = {
   lifecycles: {
     beforeCreate: async (data) => {
     // Slugify slug field
-      if (data.title) {
-        data.slug = slugify(data.title.toLowerCase());
+      if (data.name) {
+        data.slug = slugify(data.name.toLowerCase());
       }
       // Slugify template field
       if (data.template) {
@@ -59,8 +59,8 @@ module.exports = {
     },
     beforeUpdate: async (params, data) => {
     // Slugify slug field
-      if (data.title) {
-        data.slug = slugify(data.title.toLowerCase());
+      if (data.name) {
+        data.slug = slugify(data.name.toLowerCase());
       }
 
       // Slugify template field

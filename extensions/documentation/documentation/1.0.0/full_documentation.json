@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/22/2021 8:50:17 AM"
+    "x-generation-date": "01/22/2021 3:30:44 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -6556,8 +6556,7 @@
             "type": "array",
             "items": {
               "required": [
-                "id",
-                "opening_hours"
+                "id"
               ],
               "properties": {
                 "id": {
@@ -6575,35 +6574,14 @@
                 "description": {
                   "type": "string"
                 },
-                "address": {
-                  "type": "string"
-                },
-                "website": {
-                  "type": "string"
-                },
-                "phone": {
-                  "type": "string"
-                },
-                "price": {
-                  "type": "string"
-                },
-                "district": {
+                "slug": {
                   "type": "string"
                 },
                 "publish_at": {
                   "type": "string"
                 },
-                "reviews": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "category": {
                   "type": "string"
-                },
-                "opening_hours": {
-                  "type": "component"
                 },
                 "seo": {
                   "type": "component"
@@ -7006,9 +6984,6 @@
                   "type": "string"
                 }
               },
-              "page": {
-                "type": "string"
-              },
               "post": {
                 "type": "string"
               },
@@ -7040,8 +7015,7 @@
       },
       "Page": {
         "required": [
-          "id",
-          "opening_hours"
+          "id"
         ],
         "properties": {
           "id": {
@@ -7123,92 +7097,12 @@
           "description": {
             "type": "string"
           },
-          "address": {
+          "slug": {
             "type": "string"
-          },
-          "website": {
-            "type": "string"
-          },
-          "phone": {
-            "type": "string"
-          },
-          "price": {
-            "type": "string",
-            "enum": [
-              "_1",
-              "_2",
-              "_3",
-              "_4"
-            ]
-          },
-          "district": {
-            "type": "string",
-            "enum": [
-              "_1st",
-              "_2nd",
-              "_3rd",
-              "_4th",
-              "_5th",
-              "_6th",
-              "_7th",
-              "_8th",
-              "_9th",
-              "_10th",
-              "_11th",
-              "_12th",
-              "_13th",
-              "_14th",
-              "_15th",
-              "_16th",
-              "_17th",
-              "_18th",
-              "_19th",
-              "_20th"
-            ]
           },
           "publish_at": {
             "type": "string",
             "format": "date-time"
-          },
-          "reviews": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "content": {
-                  "type": "string"
-                },
-                "note": {
-                  "type": "integer"
-                },
-                "author": {
-                  "type": "string"
-                },
-                "likes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "page": {
-                  "type": "string"
-                },
-                "post": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
           },
           "category": {
             "required": [
@@ -7246,31 +7140,6 @@
                 "type": "string"
               }
             }
-          },
-          "opening_hours": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "day_interval"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "day_interval": {
-                  "type": "string"
-                },
-                "opening_hour": {
-                  "type": "string"
-                },
-                "closing_hour": {
-                  "type": "string"
-                }
-              }
-            },
-            "minItems": 1
           },
           "seo": {
             "type": "object",
@@ -7320,9 +7189,6 @@
         }
       },
       "NewPage": {
-        "required": [
-          "opening_hours"
-        ],
         "properties": {
           "name": {
             "type": "string"
@@ -7330,86 +7196,15 @@
           "description": {
             "type": "string"
           },
-          "address": {
+          "slug": {
             "type": "string"
-          },
-          "website": {
-            "type": "string"
-          },
-          "phone": {
-            "type": "string"
-          },
-          "price": {
-            "type": "string",
-            "enum": [
-              "_1",
-              "_2",
-              "_3",
-              "_4"
-            ]
-          },
-          "district": {
-            "type": "string",
-            "enum": [
-              "_1st",
-              "_2nd",
-              "_3rd",
-              "_4th",
-              "_5th",
-              "_6th",
-              "_7th",
-              "_8th",
-              "_9th",
-              "_10th",
-              "_11th",
-              "_12th",
-              "_13th",
-              "_14th",
-              "_15th",
-              "_16th",
-              "_17th",
-              "_18th",
-              "_19th",
-              "_20th"
-            ]
           },
           "publish_at": {
             "type": "string",
             "format": "date-time"
           },
-          "reviews": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "category": {
             "type": "string"
-          },
-          "opening_hours": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "day_interval"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "day_interval": {
-                  "type": "string"
-                },
-                "opening_hour": {
-                  "type": "string"
-                },
-                "closing_hour": {
-                  "type": "string"
-                }
-              }
-            },
-            "minItems": 1
           },
           "seo": {
             "type": "object",
@@ -7582,9 +7377,6 @@
                   "items": {
                     "type": "string"
                   }
-                },
-                "page": {
-                  "type": "string"
                 },
                 "post": {
                   "type": "string"
@@ -7860,77 +7652,6 @@
               }
             }
           },
-          "page": {
-            "required": [
-              "id",
-              "opening_hours"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "cover": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "name": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "address": {
-                "type": "string"
-              },
-              "website": {
-                "type": "string"
-              },
-              "phone": {
-                "type": "string"
-              },
-              "price": {
-                "type": "string"
-              },
-              "district": {
-                "type": "string"
-              },
-              "publish_at": {
-                "type": "string"
-              },
-              "reviews": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "category": {
-                "type": "string"
-              },
-              "opening_hours": {
-                "type": "component"
-              },
-              "seo": {
-                "type": "component"
-              },
-              "previous_": {
-                "type": "object"
-              },
-              "author_": {
-                "type": "object"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "post": {
             "required": [
               "id"
@@ -8003,9 +7724,6 @@
             "items": {
               "type": "string"
             }
-          },
-          "page": {
-            "type": "string"
           },
           "post": {
             "type": "string"
@@ -8650,9 +8368,6 @@
                   "items": {
                     "type": "string"
                   }
-                },
-                "page": {
-                  "type": "string"
                 },
                 "post": {
                   "type": "string"

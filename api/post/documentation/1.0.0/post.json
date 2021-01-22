@@ -627,9 +627,6 @@
                     "type": "string"
                   }
                 },
-                "page": {
-                  "type": "string"
-                },
                 "post": {
                   "type": "string"
                 },

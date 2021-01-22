@@ -529,8 +529,7 @@
             "type": "array",
             "items": {
               "required": [
-                "id",
-                "opening_hours"
+                "id"
               ],
               "properties": {
                 "id": {
@@ -548,35 +547,14 @@
                 "description": {
                   "type": "string"
                 },
-                "address": {
-                  "type": "string"
-                },
-                "website": {
-                  "type": "string"
-                },
-                "phone": {
-                  "type": "string"
-                },
-                "price": {
-                  "type": "string"
-                },
-                "district": {
+                "slug": {
                   "type": "string"
                 },
                 "publish_at": {
                   "type": "string"
                 },
-                "reviews": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "category": {
                   "type": "string"
-                },
-                "opening_hours": {
-                  "type": "component"
                 },
                 "seo": {
                   "type": "component"
