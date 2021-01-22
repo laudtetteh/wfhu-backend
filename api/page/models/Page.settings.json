@@ -16,27 +16,26 @@
     "draftAndPublish": true
   },
   "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "contenttype": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
     "cover": {
       "collection": "file",
       "via": "related",
       "plugin": "upload",
       "required": false
     },
-    "name": {
-      "type": "string"
-    },
-    "description": {
-      "type": "text"
-    },
-    "slug": {
-      "type": "string"
-    },
     "publish_at": {
       "type": "datetime"
-    },
-    "category": {
-      "model": "category",
-      "via": "pages"
     },
     "seo": {
       "type": "component",

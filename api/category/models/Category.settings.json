@@ -15,10 +15,6 @@
     "name": {
       "type": "string"
     },
-    "pages": {
-      "via": "category",
-      "collection": "page"
-    },
     "posts": {
       "via": "category",
       "collection": "post"

@@ -1,7 +1,7 @@
 'use strict';
 
 /**
-* Lifecycle callbacks for the `Page` model.
+* Lifecycle callbacks for the `Post` model.
 * Read the documentation (https://strapi.io/documentation/v3.x/concepts/models.html#lifecycle-hooks)
 * to customize this model
 * Creating slugs: ttps://strapi.io/documentation/3.0.0-beta.x/guides/slug.html#create-attributes
@@ -17,10 +17,12 @@ const slugify = require('slugify');
 //         if (options.method === 'insert' && attrs.name) {
 
 //             model.set('slug', slugify(attrs.name.toLowerCase()));
+//             model.set('contenttype', 'post');
 
 //         } else if (options.method === 'update' && attrs.name) {
 
 //             attrs.slug = slugify(attrs.name.toLowerCase());
+//             attrs.contenttype = 'post';
 //         }
 //     },
 // };
@@ -31,15 +33,23 @@ const slugify = require('slugify');
 //    * Triggered before user creation.
 //    */
 //   lifecycles: {
+
 //     async beforeCreate(data) {
 //       if (data.name) {
 //        data.slug = slugify(data.name.toLowerCase());
 //       }
+
+//       // Set content type to 'post'
+//       data.contenttype = 'post';
 //     },
+
 //     async beforeUpdate(params, data) {
 //       if (data.name) {
 //         data.slug = slugify(data.name.toLowerCase());
 //       }
+
+//       // Set content type to 'post'
+//       data.contenttype = 'post';
 //     },
 //   },
 // };
@@ -47,33 +57,31 @@ const slugify = require('slugify');
 ///-------------Mongoose
 module.exports = {
   lifecycles: {
+
     beforeCreate: async (data) => {
-    // Slugify slug field
+      // Slugify name field
       if (data.name) {
         data.slug = slugify(data.name.toLowerCase());
       }
-      // Slugify template field
-      if (data.template) {
-        data.template = slugify(data.template.toLowerCase());
-      }
+
+      // Set content type to 'post'
+      data.contenttype = 'post';
     },
+
     beforeUpdate: async (params, data) => {
-    // Slugify slug field
+      // Slugify name field
       if (data.name) {
         data.slug = slugify(data.name.toLowerCase());
       }
 
-      // Slugify template field
-      if (data.template) {
-        data.template = slugify(data.template.toLowerCase());
-      }
+      // Set content type to 'post'
+      data.contenttype = 'post';
+
+      const [previous_] = await strapi.services.post.find(params);
+      data.previous_ = previous_;
     },
 
-
-
-
-
-    afterCreate(result, data) {
+    afterCreate: async (result, data) => {
       strapi.services.history.create({
         action: 'create',
         contenttype: 'post',
@@ -82,11 +90,8 @@ module.exports = {
         after: result
       });
     },
-    async beforeUpdate(params, data){
-      const [previous_] = await strapi.services.post.find(params);
-      data.previous_ = previous_;
-    },
-    afterUpdate(result, params, data){
+
+    afterUpdate: async (result, params, data) => {
       strapi.services.history.create({
         action: 'update',
         contenttype: 'post',

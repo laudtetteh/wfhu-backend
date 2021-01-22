@@ -522,6 +522,15 @@
           "id": {
             "type": "string"
           },
+          "name": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
           "cover": {
             "type": "array",
             "items": {
@@ -592,12 +601,6 @@
               }
             }
           },
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
           "publish_at": {
             "type": "string",
             "format": "date-time"
@@ -649,12 +652,6 @@
               },
               "name": {
                 "type": "string"
-              },
-              "pages": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
               },
               "posts": {
                 "type": "array",
@@ -726,6 +723,9 @@
       "NewPost": {
         "properties": {
           "name": {
+            "type": "string"
+          },
+          "slug": {
             "type": "string"
           },
           "description": {

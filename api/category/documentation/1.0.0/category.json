@@ -525,58 +525,6 @@
           "name": {
             "type": "string"
           },
-          "pages": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "cover": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "slug": {
-                  "type": "string"
-                },
-                "publish_at": {
-                  "type": "string"
-                },
-                "category": {
-                  "type": "string"
-                },
-                "seo": {
-                  "type": "component"
-                },
-                "previous_": {
-                  "type": "object"
-                },
-                "author_": {
-                  "type": "object"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "posts": {
             "type": "array",
             "items": {
@@ -587,17 +535,20 @@
                 "id": {
                   "type": "string"
                 },
+                "name": {
+                  "type": "string"
+                },
+                "slug": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
                 "cover": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
                 },
                 "publish_at": {
                   "type": "string"
@@ -638,12 +589,6 @@
         "properties": {
           "name": {
             "type": "string"
-          },
-          "pages": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "posts": {
             "type": "array",

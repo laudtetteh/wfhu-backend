@@ -16,17 +16,20 @@
     "draftAndPublish": true
   },
   "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
     "cover": {
       "collection": "file",
       "via": "related",
       "plugin": "upload",
       "required": false
-    },
-    "name": {
-      "type": "string"
-    },
-    "description": {
-      "type": "text"
     },
     "publish_at": {
       "type": "datetime"

@@ -14,13 +14,15 @@ const slugify = require('slugify');
 
 //     beforeSave: async (model, attrs, options) => {
 
-//         if (options.method === 'insert' && attrs.title) {
+//         if (options.method === 'insert' && attrs.name) {
 
-//             model.set('slug', slugify(attrs.title.toLowerCase()));
+//             model.set('slug', slugify(attrs.name.toLowerCase()));
+//             model.set('contenttype', 'testimonial');
 
-//         } else if (options.method === 'update' && attrs.title) {
+//         } else if (options.method === 'update' && attrs.name) {
 
-//             attrs.slug = slugify(attrs.title.toLowerCase());
+//             attrs.slug = slugify(attrs.name.toLowerCase());
+//             attrs.contenttype = 'testimonial';
 //         }
 //     },
 // };
@@ -31,15 +33,23 @@ const slugify = require('slugify');
 //    * Triggered before user creation.
 //    */
 //   lifecycles: {
+
 //     async beforeCreate(data) {
-//       if (data.title) {
-//        data.slug = slugify(data.title.toLowerCase());
+//       if (data.name) {
+//        data.slug = slugify(data.name.toLowerCase());
 //       }
+
+//       // Set content type to 'testimonial'
+//       data.contenttype = 'testimonial';
 //     },
+
 //     async beforeUpdate(params, data) {
-//       if (data.title) {
-//         data.slug = slugify(data.title.toLowerCase());
+//       if (data.name) {
+//         data.slug = slugify(data.name.toLowerCase());
 //       }
+
+//       // Set content type to 'testimonial'
+//       data.contenttype = 'testimonial';
 //     },
 //   },
 // };
@@ -47,33 +57,31 @@ const slugify = require('slugify');
 ///-------------Mongoose
 module.exports = {
   lifecycles: {
+
     beforeCreate: async (data) => {
-    // Slugify slug field
-      if (data.title) {
-        data.slug = slugify(data.title.toLowerCase());
+      // Slugify name field
+      if (data.name) {
+        data.slug = slugify(data.name.toLowerCase());
       }
-      // Slugify template field
-      if (data.template) {
-        data.template = slugify(data.template.toLowerCase());
-      }
+
+      // Set content type to 'testimonial'
+      data.contenttype = 'testimonial';
     },
+
     beforeUpdate: async (params, data) => {
-    // Slugify slug field
-      if (data.title) {
-        data.slug = slugify(data.title.toLowerCase());
+      // Slugify name field
+      if (data.name) {
+        data.slug = slugify(data.name.toLowerCase());
       }
 
-      // Slugify template field
-      if (data.template) {
-        data.template = slugify(data.template.toLowerCase());
-      }
+      // Set content type to 'testimonial'
+      data.contenttype = 'testimonial';
+
+      const [previous_] = await strapi.services.testimonial.find(params);
+      data.previous_ = previous_;
     },
 
-
-
-
-
-    afterCreate(result, data) {
+    afterCreate: async (result, data) => {
       strapi.services.history.create({
         action: 'create',
         contenttype: 'testimonial',
@@ -82,11 +90,8 @@ module.exports = {
         after: result
       });
     },
-    async beforeUpdate(params, data){
-      const [previous_] = await strapi.services.testimonial.find(params);
-      data.previous_ = previous_;
-    },
-    afterUpdate(result, params, data){
+
+    afterUpdate: async (result, params, data) => {
       strapi.services.history.create({
         action: 'update',
         contenttype: 'testimonial',

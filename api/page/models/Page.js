@@ -17,10 +17,12 @@ const slugify = require('slugify');
 //         if (options.method === 'insert' && attrs.name) {
 
 //             model.set('slug', slugify(attrs.name.toLowerCase()));
+//             model.set('contenttype', 'page');
 
 //         } else if (options.method === 'update' && attrs.name) {
 
 //             attrs.slug = slugify(attrs.name.toLowerCase());
+//             attrs.contenttype = 'page';
 //         }
 //     },
 // };
@@ -31,15 +33,23 @@ const slugify = require('slugify');
 //    * Triggered before user creation.
 //    */
 //   lifecycles: {
+
 //     async beforeCreate(data) {
 //       if (data.name) {
 //        data.slug = slugify(data.name.toLowerCase());
 //       }
+
+//       // Set content type to 'page'
+//       data.contenttype = 'page';
 //     },
+
 //     async beforeUpdate(params, data) {
 //       if (data.name) {
 //         data.slug = slugify(data.name.toLowerCase());
 //       }
+
+//       // Set content type to 'page'
+//       data.contenttype = 'page';
 //     },
 //   },
 // };
@@ -47,33 +57,31 @@ const slugify = require('slugify');
 ///-------------Mongoose
 module.exports = {
   lifecycles: {
+
     beforeCreate: async (data) => {
-    // Slugify slug field
+      // Slugify name field
       if (data.name) {
         data.slug = slugify(data.name.toLowerCase());
       }
-      // Slugify template field
-      if (data.template) {
-        data.template = slugify(data.template.toLowerCase());
-      }
+
+      // Set content type to 'page'
+      data.contenttype = 'page';
     },
+
     beforeUpdate: async (params, data) => {
-    // Slugify slug field
+      // Slugify name field
       if (data.name) {
         data.slug = slugify(data.name.toLowerCase());
       }
 
-      // Slugify template field
-      if (data.template) {
-        data.template = slugify(data.template.toLowerCase());
-      }
+      // Set content type to 'page'
+      data.contenttype = 'page';
+
+      const [previous_] = await strapi.services.page.find(params);
+      data.previous_ = previous_;
     },
 
-
-
-
-
-    afterCreate(result, data) {
+    afterCreate: async (result, data) => {
       strapi.services.history.create({
         action: 'create',
         contenttype: 'page',
@@ -82,11 +90,8 @@ module.exports = {
         after: result
       });
     },
-    async beforeUpdate(params, data){
-      const [previous_] = await strapi.services.page.find(params);
-      data.previous_ = previous_;
-    },
-    afterUpdate(result, params, data){
+
+    afterUpdate: async (result, params, data) => {
       strapi.services.history.create({
         action: 'update',
         contenttype: 'page',

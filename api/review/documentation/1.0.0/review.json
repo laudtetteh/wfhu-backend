@@ -620,17 +620,20 @@
               "id": {
                 "type": "string"
               },
+              "name": {
+                "type": "string"
+              },
+              "slug": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
               "cover": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
-              },
-              "name": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
               },
               "publish_at": {
                 "type": "string"
