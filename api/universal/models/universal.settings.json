@@ -21,7 +21,7 @@
     "seo": {
       "type": "component",
       "repeatable": false,
-      "component": "restaurant.seo"
+      "component": "page.seo"
     },
     "slices": {
       "type": "dynamiczone",

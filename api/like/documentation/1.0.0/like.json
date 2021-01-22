@@ -602,7 +602,7 @@
                   "type": "string"
                 }
               },
-              "restaurant": {
+              "page": {
                 "type": "string"
               },
               "created_by": {

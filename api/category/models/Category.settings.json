@@ -15,9 +15,9 @@
     "name": {
       "type": "string"
     },
-    "restaurants": {
+    "pages": {
       "via": "category",
-      "collection": "restaurant"
+      "collection": "page"
     },
     "previous_": {
       "private": true,

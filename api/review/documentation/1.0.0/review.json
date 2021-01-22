@@ -612,7 +612,7 @@
               }
             }
           },
-          "restaurant": {
+          "page": {
             "required": [
               "id",
               "opening_hours"
@@ -704,7 +704,7 @@
               "type": "string"
             }
           },
-          "restaurant": {
+          "page": {
             "type": "string"
           },
           "created_by": {

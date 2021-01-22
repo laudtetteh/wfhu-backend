@@ -10,13 +10,13 @@
 
 module.exports = {
   '*/1 * * * * *': async () => {
-    const draftRestaurants = await strapi.services.restaurant.find({
+    const draftPages = await strapi.services.page.find({
       _publicationState: 'preview',
       publish_at_lt: new Date(),
     });
 
-    draftRestaurants.forEach(restaurant => {
-      strapi.services.restaurant.update({id: restaurant.id}, {
+    draftPages.forEach(page => {
+      strapi.services.page.update({id: page.id}, {
         published_at: new Date(),
         publish_at: null
       })

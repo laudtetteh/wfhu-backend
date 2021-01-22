@@ -1,9 +1,9 @@
 {
   "kind": "collectionType",
   "connection": "default",
-  "collectionName": "restaurants",
+  "collectionName": "pages",
   "info": {
-    "name": "restaurant",
+    "name": "page",
     "description": ""
   },
   "options": {
@@ -76,22 +76,22 @@
     },
     "reviews": {
       "collection": "review",
-      "via": "restaurant"
+      "via": "page"
     },
     "category": {
       "model": "category",
-      "via": "restaurants"
+      "via": "pages"
     },
     "opening_hours": {
       "type": "component",
-      "component": "restaurant.opening-hours",
+      "component": "page.opening-hours",
       "min": 1,
       "repeatable": true,
       "required": true
     },
     "seo": {
       "type": "component",
-      "component": "restaurant.seo",
+      "component": "page.seo",
       "required": false,
       "repeatable": false
     },

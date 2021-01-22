@@ -16,8 +16,8 @@ module.exports = {
       return ctx.badRequest(null, 'Can\'t find authenticated user ID');
     }
 
-    if (!ctx.request.body.restaurant) {
-      return ctx.badRequest(null, '`restaurant` attribute is missing');
+    if (!ctx.request.body.page) {
+      return ctx.badRequest(null, '`page` attribute is missing');
     }
 
     if (!ctx.request.body.note) {

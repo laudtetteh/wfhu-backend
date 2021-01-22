@@ -17,7 +17,7 @@
     },
     "meta": {
       "type": "component",
-      "component": "restaurant.meta",
+      "component": "page.meta",
       "repeatable": true
     }
   }

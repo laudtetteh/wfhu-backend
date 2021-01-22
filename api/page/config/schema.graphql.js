@@ -1,11 +1,11 @@
 module.exports = {
   definition: /* GraphQL */ `
-    extend type Restaurant {
+    extend type Page {
       note: Float
-      noteDetails: [RestaurantNote!]!
+      noteDetails: [PageNote!]!
     }
 
-    type RestaurantNote {
+    type PageNote {
       note: Int
       count: Int
     }

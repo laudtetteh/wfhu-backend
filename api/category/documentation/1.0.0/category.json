@@ -525,7 +525,7 @@
           "name": {
             "type": "string"
           },
-          "restaurants": {
+          "pages": {
             "type": "array",
             "items": {
               "required": [
@@ -606,7 +606,7 @@
           "name": {
             "type": "string"
           },
-          "restaurants": {
+          "pages": {
             "type": "array",
             "items": {
               "type": "string"

@@ -1,38 +1,38 @@
 module.exports = {
   find: async (ctx) => {
-    let restaurants;
+    let pages;
 
     if (ctx.query._q) {
-      restaurants = await strapi.api.restaurant.services.restaurant.search(ctx.query);
+      pages = await strapi.api.page.services.page.search(ctx.query);
     } else {
-      restaurants = await strapi.api.restaurant.services.restaurant.find(ctx.query);
+      pages = await strapi.api.page.services.page.find(ctx.query);
     }
 
-    restaurants = await Promise.all(
-      restaurants.map(async (restaurant) => {
-        restaurant.note = await strapi.api.review.services.review.average(restaurant.id);
+    pages = await Promise.all(
+      pages.map(async (page) => {
+        page.note = await strapi.api.review.services.review.average(page.id);
 
-        return restaurant;
+        return page;
       })
     );
 
-    return restaurants;
+    return pages;
   },
 
   findOne: async (ctx) => {
     const { id } = ctx.params;
-    let restaurant = await strapi.api.restaurant.services.restaurant.findOne({ id });
+    let page = await strapi.api.page.services.page.findOne({ id });
 
-    if (!restaurant) {
+    if (!page) {
       return ctx.notFound();
     }
 
-    restaurant.note = await strapi.api.review.services.review.average(restaurant.id);
+    page.note = await strapi.api.review.services.review.average(page.id);
 
     let noteDetails = await strapi
       .query('review')
       .model.query(function (qb) {
-        qb.where('restaurant', '=', restaurant.id);
+        qb.where('page', '=', page.id);
         qb.groupBy('note');
         qb.select('note');
         qb.count();
@@ -40,7 +40,7 @@ module.exports = {
       .fetchAll()
       .then((res) => res.toJSON());
 
-    restaurant.noteDetails = [];
+    page.noteDetails = [];
 
     for (let i = 5; i > 0; i--) {
       let detail = noteDetails.find((detail) => {
@@ -59,9 +59,9 @@ module.exports = {
         };
       }
 
-      restaurant.noteDetails.push(detail);
+      page.noteDetails.push(detail);
     }
 
-    return restaurant;
+    return page;
   }
 };

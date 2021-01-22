@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Lifecycle callbacks for the `Restaurant` model.
+ * Lifecycle callbacks for the `Page` model.
  */
 
 module.exports = {
@@ -9,20 +9,20 @@ module.exports = {
     afterCreate(result, data) {
       strapi.services.history.create({
         action: 'create',
-        contenttype: 'restaurant',
+        contenttype: 'page',
         author: data.author_,
         before: {},
         after: result
       });
     },
     async beforeUpdate(params, data){
-      const [previous_] = await strapi.services.restaurant.find(params);
+      const [previous_] = await strapi.services.page.find(params);
       data.previous_ = previous_;
     },
     afterUpdate(result, params, data){
       strapi.services.history.create({
         action: 'update',
-        contenttype: 'restaurant',
+        contenttype: 'page',
         author: data.author_,
         before: data.previous_,
         after: result
