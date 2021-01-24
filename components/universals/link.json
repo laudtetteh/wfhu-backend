@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_universals_links",
+  "info": {
+    "name": "link",
+    "icon": "unlink"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "URL": {
+      "type": "string"
+    }
+  }
+}

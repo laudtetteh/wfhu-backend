@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "top_menus",
+  "info": {
+    "name": "Top Menu"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "link": {
+      "type": "component",
+      "repeatable": true,
+      "component": "universals.link"
+    }
+  }
+}
