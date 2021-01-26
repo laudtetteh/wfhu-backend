@@ -16,8 +16,8 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "cover": {
-      "collection": "file",
+    "image": {
+      "model": "file",
       "via": "related",
       "plugin": "upload",
       "required": false
@@ -30,12 +30,6 @@
     },
     "publish_at": {
       "type": "datetime"
-    },
-    "seo": {
-      "type": "component",
-      "component": "testimonial.seo",
-      "required": false,
-      "repeatable": false
     },
     "previous_": {
       "private": true,
