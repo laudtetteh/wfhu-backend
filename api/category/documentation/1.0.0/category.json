@@ -544,11 +544,8 @@
                 "description": {
                   "type": "string"
                 },
-                "cover": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                "image": {
+                  "type": "string"
                 },
                 "publish_at": {
                   "type": "string"

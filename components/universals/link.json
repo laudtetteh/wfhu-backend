@@ -2,14 +2,15 @@
   "collectionName": "components_universals_links",
   "info": {
     "name": "link",
-    "icon": "unlink"
+    "icon": "unlink",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "label": {
       "type": "string"
     },
-    "URL": {
+    "path": {
       "type": "string"
     }
   }

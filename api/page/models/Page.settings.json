@@ -22,15 +22,15 @@
     "slug": {
       "type": "string"
     },
-    "contenttype": {
-      "type": "string"
-    },
     "description": {
       "type": "text"
     },
-    "cover": {
-      "collection": "file",
+    "image": {
+      "model": "file",
       "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
       "plugin": "upload",
       "required": false
     },

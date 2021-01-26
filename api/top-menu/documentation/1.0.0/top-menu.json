@@ -337,7 +337,7 @@
                 "label": {
                   "type": "string"
                 },
-                "URL": {
+                "path": {
                   "type": "string"
                 }
               }
@@ -365,7 +365,7 @@
                 "label": {
                   "type": "string"
                 },
-                "URL": {
+                "path": {
                   "type": "string"
                 }
               }
