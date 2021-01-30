@@ -643,6 +643,33 @@
               }
             }
           },
+          "dynamic_fields": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "page.no-of-posts-to-show"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "no_of_posts": {
+                      "type": "integer",
+                      "default": 3
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                }
+              ]
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -710,6 +737,33 @@
           },
           "author_": {
             "type": "object"
+          },
+          "dynamic_fields": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "page.no-of-posts-to-show"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "no_of_posts": {
+                      "type": "integer",
+                      "default": 3
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                }
+              ]
+            }
           },
           "published_at": {
             "type": "string",

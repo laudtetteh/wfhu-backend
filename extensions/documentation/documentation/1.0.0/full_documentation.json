@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/26/2021 4:48:51 PM"
+    "x-generation-date": "01/30/2021 12:49:20 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -7396,6 +7396,33 @@
               }
             }
           },
+          "dynamic_fields": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "page.no-of-posts-to-show"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "no_of_posts": {
+                      "type": "integer",
+                      "default": 3
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                }
+              ]
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -7463,6 +7490,33 @@
           },
           "author_": {
             "type": "object"
+          },
+          "dynamic_fields": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "page.no-of-posts-to-show"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "no_of_posts": {
+                      "type": "integer",
+                      "default": 3
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                }
+              ]
+            }
           },
           "published_at": {
             "type": "string",

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_page_number_of_posts_to_shows",
+  "info": {
+    "name": "Number of Posts to Show",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "no_of_posts": {
+      "type": "integer"
+    }
+  }
+}

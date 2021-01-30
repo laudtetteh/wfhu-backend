@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_page_no_of_posts_to_shows",
+  "info": {
+    "name": "No of posts to show",
+    "icon": "list-ol",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "no_of_posts": {
+      "type": "integer",
+      "default": 3
+    }
+  }
+}
