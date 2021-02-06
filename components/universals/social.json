@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_universals_socials",
+  "info": {
+    "name": "social",
+    "icon": "compress-arrows-alt"
+  },
+  "options": {},
+  "attributes": {
+    "youtube": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "facebook": {
+      "type": "string"
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    }
+  }
+}
