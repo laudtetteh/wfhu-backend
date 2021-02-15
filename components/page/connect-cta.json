@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_page_connect_ctas",
+  "info": {
+    "name": "Connect CTA",
+    "icon": "handshake"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "maxLength": 43
+    },
+    "paragraph": {
+      "type": "richtext",
+      "maxLength": 218
+    },
+    "button_link": {
+      "type": "string"
+    },
+    "button_text": {
+      "type": "string",
+      "maxLength": 15
+    }
+  }
+}

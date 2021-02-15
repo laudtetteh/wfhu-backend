@@ -652,7 +652,9 @@
                     "__component": {
                       "type": "string",
                       "enum": [
-                        "page.no-of-posts-to-show"
+                        "page.no-of-posts-to-show",
+                        "page.intro-cta",
+                        "page.connect-cta"
                       ]
                     },
                     "id": {
@@ -661,6 +663,132 @@
                     "no_of_posts": {
                       "type": "integer",
                       "default": 3
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "page.no-of-posts-to-show",
+                        "page.intro-cta",
+                        "page.connect-cta"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "intro_heading": {
+                      "type": "string",
+                      "maxLength": 43
+                    },
+                    "intro_paragraph": {
+                      "type": "string",
+                      "maxLength": 215
+                    },
+                    "intro_image": {
+                      "required": [
+                        "id",
+                        "name",
+                        "hash",
+                        "mime",
+                        "size",
+                        "url",
+                        "provider"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "alternativeText": {
+                          "type": "string"
+                        },
+                        "caption": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        },
+                        "height": {
+                          "type": "integer"
+                        },
+                        "formats": {
+                          "type": "object"
+                        },
+                        "hash": {
+                          "type": "string"
+                        },
+                        "ext": {
+                          "type": "string"
+                        },
+                        "mime": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "number"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "previewUrl": {
+                          "type": "string"
+                        },
+                        "provider": {
+                          "type": "string"
+                        },
+                        "provider_metadata": {
+                          "type": "object"
+                        },
+                        "related": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "page.no-of-posts-to-show",
+                        "page.intro-cta",
+                        "page.connect-cta"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "heading": {
+                      "type": "string",
+                      "maxLength": 43
+                    },
+                    "paragraph": {
+                      "type": "string",
+                      "maxLength": 218
+                    },
+                    "button_link": {
+                      "type": "string"
+                    },
+                    "button_text": {
+                      "type": "string",
+                      "maxLength": 15
                     }
                   },
                   "required": [
@@ -747,7 +875,9 @@
                     "__component": {
                       "type": "string",
                       "enum": [
-                        "page.no-of-posts-to-show"
+                        "page.no-of-posts-to-show",
+                        "page.intro-cta",
+                        "page.connect-cta"
                       ]
                     },
                     "id": {
@@ -756,6 +886,132 @@
                     "no_of_posts": {
                       "type": "integer",
                       "default": 3
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "page.no-of-posts-to-show",
+                        "page.intro-cta",
+                        "page.connect-cta"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "intro_heading": {
+                      "type": "string",
+                      "maxLength": 43
+                    },
+                    "intro_paragraph": {
+                      "type": "string",
+                      "maxLength": 215
+                    },
+                    "intro_image": {
+                      "required": [
+                        "id",
+                        "name",
+                        "hash",
+                        "mime",
+                        "size",
+                        "url",
+                        "provider"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "alternativeText": {
+                          "type": "string"
+                        },
+                        "caption": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        },
+                        "height": {
+                          "type": "integer"
+                        },
+                        "formats": {
+                          "type": "object"
+                        },
+                        "hash": {
+                          "type": "string"
+                        },
+                        "ext": {
+                          "type": "string"
+                        },
+                        "mime": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "number"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "previewUrl": {
+                          "type": "string"
+                        },
+                        "provider": {
+                          "type": "string"
+                        },
+                        "provider_metadata": {
+                          "type": "object"
+                        },
+                        "related": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "page.no-of-posts-to-show",
+                        "page.intro-cta",
+                        "page.connect-cta"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "heading": {
+                      "type": "string",
+                      "maxLength": 43
+                    },
+                    "paragraph": {
+                      "type": "string",
+                      "maxLength": 218
+                    },
+                    "button_link": {
+                      "type": "string"
+                    },
+                    "button_text": {
+                      "type": "string",
+                      "maxLength": 15
                     }
                   },
                   "required": [

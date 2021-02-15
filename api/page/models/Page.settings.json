@@ -54,7 +54,9 @@
     "dynamic_fields": {
       "type": "dynamiczone",
       "components": [
-        "page.no-of-posts-to-show"
+        "page.no-of-posts-to-show",
+        "page.intro-cta",
+        "page.connect-cta"
       ]
     }
   }
