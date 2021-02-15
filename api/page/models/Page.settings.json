@@ -22,18 +22,6 @@
     "slug": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
-    },
-    "image": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
-      "required": false
-    },
     "publish_at": {
       "type": "datetime"
     },
@@ -58,6 +46,9 @@
         "page.intro-cta",
         "page.connect-cta"
       ]
+    },
+    "description": {
+      "type": "richtext"
     }
   }
 }
