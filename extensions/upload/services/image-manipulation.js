@@ -100,7 +100,7 @@ const BREAKPOINTS = {
   // small: 500,
 
   //custom sizes
-  split_section: [1380, 668], // 2.5 actual container size 552 x 267 for better resolution
+  split_section: [1380, 738], // 2.5 actual container size 552 x 295 for better resolution
   post_loop: [907, 615],  // 2.5 actual container size 362.7 x 245.9 or better resolution
   testimonial_loop: [670, 670],  // 2.5 actual container size 268 x 268 or better resolution
 
