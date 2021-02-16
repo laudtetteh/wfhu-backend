@@ -44,8 +44,8 @@
       "via": "post"
     },
     "category": {
-      "model": "category",
-      "via": "posts"
+      "via": "posts",
+      "model": "category"
     },
     "seo": {
       "type": "component",

@@ -580,6 +580,9 @@
                 }
               }
             }
+          },
+          "slug": {
+            "type": "string"
           }
         }
       },
@@ -599,6 +602,9 @@
           },
           "author_": {
             "type": "object"
+          },
+          "slug": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"

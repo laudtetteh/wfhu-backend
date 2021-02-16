@@ -17,8 +17,8 @@
       "unique": true
     },
     "posts": {
-      "via": "category",
-      "collection": "post"
+      "collection": "post",
+      "via": "category"
     },
     "previous_": {
       "private": true,
@@ -27,6 +27,9 @@
     "author_": {
       "private": true,
       "type": "json"
+    },
+    "slug": {
+      "type": "string"
     }
   }
 }
