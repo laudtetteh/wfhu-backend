@@ -17,10 +17,12 @@
   },
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "unique": true
     },
     "slug": {
-      "type": "string"
+      "type": "string",
+      "unique": true
     },
     "publish_at": {
       "type": "datetime"
