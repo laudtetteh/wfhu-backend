@@ -8,10 +8,12 @@
   "options": {},
   "attributes": {
     "label": {
-      "type": "string"
+      "type": "string",
+      "unique": true
     },
     "path": {
-      "type": "string"
+      "type": "string",
+      "unique": true
     }
   }
 }

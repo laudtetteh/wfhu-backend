@@ -614,7 +614,8 @@
           },
           "post": {
             "required": [
-              "id"
+              "id",
+              "name"
             ],
             "properties": {
               "id": {

@@ -516,7 +516,8 @@
     "schemas": {
       "Post": {
         "required": [
-          "id"
+          "id",
+          "name"
         ],
         "properties": {
           "id": {
@@ -718,6 +719,9 @@
         }
       },
       "NewPost": {
+        "required": [
+          "name"
+        ],
         "properties": {
           "name": {
             "type": "string"

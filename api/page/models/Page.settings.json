@@ -18,7 +18,8 @@
   "attributes": {
     "name": {
       "type": "string",
-      "unique": false
+      "unique": true,
+      "required": true
     },
     "slug": {
       "type": "string",

@@ -516,7 +516,8 @@
     "schemas": {
       "Page": {
         "required": [
-          "id"
+          "id",
+          "name"
         ],
         "properties": {
           "id": {
@@ -738,6 +739,9 @@
         }
       },
       "NewPage": {
+        "required": [
+          "name"
+        ],
         "properties": {
           "name": {
             "type": "string"
