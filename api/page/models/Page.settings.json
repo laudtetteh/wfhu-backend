@@ -18,11 +18,11 @@
   "attributes": {
     "name": {
       "type": "string",
-      "unique": true
+      "unique": false
     },
     "slug": {
       "type": "string",
-      "unique": true
+      "unique": false
     },
     "publish_at": {
       "type": "datetime"
