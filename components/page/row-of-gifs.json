@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_page_row_of_gifs",
+  "info": {
+    "name": "Row of Gifs",
+    "icon": "images",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "gifs_component": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page.gif"
+    }
+  }
+}

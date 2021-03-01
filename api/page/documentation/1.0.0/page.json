@@ -585,7 +585,8 @@
                       "enum": [
                         "page.no-of-posts-to-show",
                         "page.intro-cta",
-                        "page.connect-cta"
+                        "page.connect-cta",
+                        "page.row-of-gifs"
                       ]
                     },
                     "id": {
@@ -607,7 +608,8 @@
                       "enum": [
                         "page.no-of-posts-to-show",
                         "page.intro-cta",
-                        "page.connect-cta"
+                        "page.connect-cta",
+                        "page.row-of-gifs"
                       ]
                     },
                     "id": {
@@ -700,7 +702,8 @@
                       "enum": [
                         "page.no-of-posts-to-show",
                         "page.intro-cta",
-                        "page.connect-cta"
+                        "page.connect-cta",
+                        "page.row-of-gifs"
                       ]
                     },
                     "id": {
@@ -720,6 +723,106 @@
                     "button_text": {
                       "type": "string",
                       "maxLength": 15
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "page.no-of-posts-to-show",
+                        "page.intro-cta",
+                        "page.connect-cta",
+                        "page.row-of-gifs"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "gifs_component": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "gif": {
+                            "required": [
+                              "id",
+                              "name",
+                              "hash",
+                              "mime",
+                              "size",
+                              "url",
+                              "provider"
+                            ],
+                            "properties": {
+                              "id": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "alternativeText": {
+                                "type": "string"
+                              },
+                              "caption": {
+                                "type": "string"
+                              },
+                              "width": {
+                                "type": "integer"
+                              },
+                              "height": {
+                                "type": "integer"
+                              },
+                              "formats": {
+                                "type": "object"
+                              },
+                              "hash": {
+                                "type": "string"
+                              },
+                              "ext": {
+                                "type": "string"
+                              },
+                              "mime": {
+                                "type": "string"
+                              },
+                              "size": {
+                                "type": "number"
+                              },
+                              "url": {
+                                "type": "string"
+                              },
+                              "previewUrl": {
+                                "type": "string"
+                              },
+                              "provider": {
+                                "type": "string"
+                              },
+                              "provider_metadata": {
+                                "type": "object"
+                              },
+                              "related": {
+                                "type": "string"
+                              },
+                              "created_by": {
+                                "type": "string"
+                              },
+                              "updated_by": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
                     }
                   },
                   "required": [
@@ -811,7 +914,8 @@
                       "enum": [
                         "page.no-of-posts-to-show",
                         "page.intro-cta",
-                        "page.connect-cta"
+                        "page.connect-cta",
+                        "page.row-of-gifs"
                       ]
                     },
                     "id": {
@@ -833,7 +937,8 @@
                       "enum": [
                         "page.no-of-posts-to-show",
                         "page.intro-cta",
-                        "page.connect-cta"
+                        "page.connect-cta",
+                        "page.row-of-gifs"
                       ]
                     },
                     "id": {
@@ -926,7 +1031,8 @@
                       "enum": [
                         "page.no-of-posts-to-show",
                         "page.intro-cta",
-                        "page.connect-cta"
+                        "page.connect-cta",
+                        "page.row-of-gifs"
                       ]
                     },
                     "id": {
@@ -946,6 +1052,106 @@
                     "button_text": {
                       "type": "string",
                       "maxLength": 15
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "page.no-of-posts-to-show",
+                        "page.intro-cta",
+                        "page.connect-cta",
+                        "page.row-of-gifs"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "gifs_component": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "gif": {
+                            "required": [
+                              "id",
+                              "name",
+                              "hash",
+                              "mime",
+                              "size",
+                              "url",
+                              "provider"
+                            ],
+                            "properties": {
+                              "id": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "alternativeText": {
+                                "type": "string"
+                              },
+                              "caption": {
+                                "type": "string"
+                              },
+                              "width": {
+                                "type": "integer"
+                              },
+                              "height": {
+                                "type": "integer"
+                              },
+                              "formats": {
+                                "type": "object"
+                              },
+                              "hash": {
+                                "type": "string"
+                              },
+                              "ext": {
+                                "type": "string"
+                              },
+                              "mime": {
+                                "type": "string"
+                              },
+                              "size": {
+                                "type": "number"
+                              },
+                              "url": {
+                                "type": "string"
+                              },
+                              "previewUrl": {
+                                "type": "string"
+                              },
+                              "provider": {
+                                "type": "string"
+                              },
+                              "provider_metadata": {
+                                "type": "object"
+                              },
+                              "related": {
+                                "type": "string"
+                              },
+                              "created_by": {
+                                "type": "string"
+                              },
+                              "updated_by": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
                     }
                   },
                   "required": [

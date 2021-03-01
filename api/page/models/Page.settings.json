@@ -47,7 +47,8 @@
       "components": [
         "page.no-of-posts-to-show",
         "page.intro-cta",
-        "page.connect-cta"
+        "page.connect-cta",
+        "page.row-of-gifs"
       ]
     },
     "description": {
