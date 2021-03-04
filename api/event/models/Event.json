@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "events",
+  "info": {
+    "name": "event",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": "",
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "slug": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "publish_at": {
+      "type": "datetime"
+    },
+    "seo": {
+      "type": "component",
+      "component": "event.seo",
+      "required": false,
+      "repeatable": false
+    },
+    "previous_": {
+      "private": true,
+      "type": "json"
+    },
+    "author_": {
+      "private": true,
+      "type": "json"
+    },
+    "event_start": {
+      "type": "datetime",
+      "required": true
+    },
+    "event_end": {
+      "type": "datetime",
+      "required": true
+    },
+    "event_details": {
+      "type": "richtext"
+    },
+    "event_ended": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}
