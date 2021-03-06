@@ -59,7 +59,7 @@
     },
     "event_end": {
       "type": "datetime",
-      "required": true
+      "required": false
     },
     "event_details": {
       "type": "richtext"
@@ -68,6 +68,62 @@
       "type": "boolean",
       "default": false,
       "required": true
+    },
+    "event_timezone": {
+      "type": "enumeration",
+      "enum": [
+        "ADT",
+        "AKDT",
+        "AKST",
+        "ART",
+        "AST",
+        "BDT",
+        "BRST",
+        "BRT",
+        "BST",
+        "CAT",
+        "CDT",
+        "CEST",
+        "CET",
+        "CLST",
+        "CLT",
+        "COT",
+        "CST",
+        "EAT",
+        "EDT",
+        "EEST",
+        "EET",
+        "EST",
+        "GMT",
+        "GST",
+        "HKT",
+        "HST",
+        "ICT",
+        "IRST",
+        "IST",
+        "JST",
+        "KST",
+        "MDT",
+        "MSD",
+        "MSK",
+        "MST",
+        "NZDT",
+        "NZST",
+        "PDT",
+        "PET",
+        "PHT",
+        "PKT",
+        "PST",
+        "SGT",
+        "UTC",
+        "WAT",
+        "WEST",
+        "WET",
+        "WIT"
+      ]
+    },
+    "keep_on_homepage": {
+      "type": "boolean"
     }
   }
 }

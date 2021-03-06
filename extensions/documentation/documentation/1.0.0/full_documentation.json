@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "03/04/2021 4:18:50 PM"
+    "x-generation-date": "03/06/2021 1:19:39 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -7781,7 +7781,6 @@
           "id",
           "name",
           "event_start",
-          "event_end",
           "event_ended"
         ],
         "properties": {
@@ -7924,6 +7923,62 @@
             "type": "boolean",
             "default": false
           },
+          "event_timezone": {
+            "type": "string",
+            "enum": [
+              "ADT",
+              "AKDT",
+              "AKST",
+              "ART",
+              "AST",
+              "BDT",
+              "BRST",
+              "BRT",
+              "BST",
+              "CAT",
+              "CDT",
+              "CEST",
+              "CET",
+              "CLST",
+              "CLT",
+              "COT",
+              "CST",
+              "EAT",
+              "EDT",
+              "EEST",
+              "EET",
+              "EST",
+              "GMT",
+              "GST",
+              "HKT",
+              "HST",
+              "ICT",
+              "IRST",
+              "IST",
+              "JST",
+              "KST",
+              "MDT",
+              "MSD",
+              "MSK",
+              "MST",
+              "NZDT",
+              "NZST",
+              "PDT",
+              "PET",
+              "PHT",
+              "PKT",
+              "PST",
+              "SGT",
+              "UTC",
+              "WAT",
+              "WEST",
+              "WET",
+              "WIT"
+            ]
+          },
+          "keep_on_homepage": {
+            "type": "boolean"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -7934,7 +7989,6 @@
         "required": [
           "name",
           "event_start",
-          "event_end",
           "event_ended"
         ],
         "properties": {
@@ -8012,6 +8066,62 @@
           "event_ended": {
             "type": "boolean",
             "default": false
+          },
+          "event_timezone": {
+            "type": "string",
+            "enum": [
+              "ADT",
+              "AKDT",
+              "AKST",
+              "ART",
+              "AST",
+              "BDT",
+              "BRST",
+              "BRT",
+              "BST",
+              "CAT",
+              "CDT",
+              "CEST",
+              "CET",
+              "CLST",
+              "CLT",
+              "COT",
+              "CST",
+              "EAT",
+              "EDT",
+              "EEST",
+              "EET",
+              "EST",
+              "GMT",
+              "GST",
+              "HKT",
+              "HST",
+              "ICT",
+              "IRST",
+              "IST",
+              "JST",
+              "KST",
+              "MDT",
+              "MSD",
+              "MSK",
+              "MST",
+              "NZDT",
+              "NZST",
+              "PDT",
+              "PET",
+              "PHT",
+              "PKT",
+              "PST",
+              "SGT",
+              "UTC",
+              "WAT",
+              "WEST",
+              "WET",
+              "WIT"
+            ]
+          },
+          "keep_on_homepage": {
+            "type": "boolean"
           },
           "published_at": {
             "type": "string",
