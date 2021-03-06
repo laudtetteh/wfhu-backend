@@ -665,6 +665,7 @@
             "type": "string",
             "enum": [
               "ADT",
+              "AEST",
               "AKDT",
               "AKST",
               "ART",
@@ -809,6 +810,7 @@
             "type": "string",
             "enum": [
               "ADT",
+              "AEST",
               "AKDT",
               "AKST",
               "ART",

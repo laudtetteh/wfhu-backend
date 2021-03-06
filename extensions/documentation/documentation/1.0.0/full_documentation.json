@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "03/06/2021 1:19:39 PM"
+    "x-generation-date": "03/06/2021 2:42:30 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -7927,6 +7927,7 @@
             "type": "string",
             "enum": [
               "ADT",
+              "AEST",
               "AKDT",
               "AKST",
               "ART",
@@ -8071,6 +8072,7 @@
             "type": "string",
             "enum": [
               "ADT",
+              "AEST",
               "AKDT",
               "AKST",
               "ART",

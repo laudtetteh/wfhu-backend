@@ -73,6 +73,7 @@
       "type": "enumeration",
       "enum": [
         "ADT",
+        "AEST",
         "AKDT",
         "AKST",
         "ART",
