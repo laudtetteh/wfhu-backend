@@ -48,7 +48,8 @@
         "page.no-of-posts-to-show",
         "page.intro-cta",
         "page.connect-cta",
-        "page.row-of-gifs"
+        "page.row-of-gifs",
+        "page.single-image"
       ]
     },
     "description": {

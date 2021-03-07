@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_page_single_images",
+  "info": {
+    "name": "Single Image",
+    "icon": "file-image"
+  },
+  "options": {},
+  "attributes": {
+    "profile_pic": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
