@@ -551,12 +551,6 @@
                 "publish_at": {
                   "type": "string"
                 },
-                "reviews": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "category": {
                   "type": "string"
                 },

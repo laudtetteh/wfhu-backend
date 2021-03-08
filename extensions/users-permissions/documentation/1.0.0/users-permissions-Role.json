@@ -558,18 +558,6 @@
                 "role": {
                   "type": "string"
                 },
-                "reviews": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "likes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "picture": {
                   "type": "string"
                 },

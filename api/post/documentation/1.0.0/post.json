@@ -603,43 +603,6 @@
             "type": "string",
             "format": "date-time"
           },
-          "reviews": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "content": {
-                  "type": "string"
-                },
-                "note": {
-                  "type": "integer"
-                },
-                "author": {
-                  "type": "string"
-                },
-                "likes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "post": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "category": {
             "required": [
               "id"
@@ -738,12 +701,6 @@
           "publish_at": {
             "type": "string",
             "format": "date-time"
-          },
-          "reviews": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "category": {
             "type": "string"

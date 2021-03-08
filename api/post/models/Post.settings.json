@@ -39,13 +39,9 @@
     "publish_at": {
       "type": "datetime"
     },
-    "reviews": {
-      "collection": "review",
-      "via": "post"
-    },
     "category": {
-      "via": "posts",
-      "model": "category"
+      "model": "category",
+      "via": "posts"
     },
     "seo": {
       "type": "component",

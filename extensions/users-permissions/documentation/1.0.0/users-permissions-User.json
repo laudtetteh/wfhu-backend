@@ -1251,68 +1251,6 @@
               }
             }
           },
-          "reviews": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "content": {
-                  "type": "string"
-                },
-                "note": {
-                  "type": "integer"
-                },
-                "author": {
-                  "type": "string"
-                },
-                "likes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "post": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "likes": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "author": {
-                  "type": "string"
-                },
-                "review": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "picture": {
             "required": [
               "id",
@@ -1417,18 +1355,6 @@
           },
           "role": {
             "type": "string"
-          },
-          "reviews": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "likes": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "created_by": {
             "type": "string"
