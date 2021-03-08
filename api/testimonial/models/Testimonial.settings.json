@@ -3,7 +3,7 @@
   "connection": "default",
   "collectionName": "testimonials",
   "info": {
-    "name": "testimonial",
+    "name": "review",
     "description": ""
   },
   "options": {
