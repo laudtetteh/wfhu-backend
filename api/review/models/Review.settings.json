@@ -1,7 +1,7 @@
 {
   "kind": "collectionType",
   "connection": "default",
-  "collectionName": "testimonials",
+  "collectionName": "reviews",
   "info": {
     "name": "review",
     "description": ""

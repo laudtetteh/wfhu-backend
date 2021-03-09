@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/testimonials",
-      "handler": "Testimonial.find",
+      "path": "/reviews",
+      "handler": "Review.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/testimonials/count",
-      "handler": "Testimonial.count",
+      "path": "/reviews/count",
+      "handler": "Review.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/testimonials/:id",
-      "handler": "Testimonial.findOne",
+      "path": "/reviews/:id",
+      "handler": "Review.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/testimonials",
-      "handler": "Testimonial.create",
+      "path": "/reviews",
+      "handler": "Review.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/testimonials/:id",
-      "handler": "Testimonial.update",
+      "path": "/reviews/:id",
+      "handler": "Review.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/testimonials/:id",
-      "handler": "Testimonial.delete",
+      "path": "/reviews/:id",
+      "handler": "Review.delete",
       "config": {
         "policies": []
       }

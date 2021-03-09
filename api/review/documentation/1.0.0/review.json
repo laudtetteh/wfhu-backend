@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/testimonials": {
+    "/reviews": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Testimonial"
+                    "$ref": "#/components/schemas/Review"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Testimonial"
+          "Review"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Testimonial"
+                  "$ref": "#/components/schemas/Review"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Testimonial"
+          "Review"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewTestimonial"
+                "$ref": "#/components/schemas/NewReview"
               }
             }
           }
         }
       }
     },
-    "/testimonials/count": {
+    "/reviews/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Testimonial"
+          "Review"
         ],
         "parameters": []
       }
     },
-    "/testimonials/{id}": {
+    "/reviews/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Testimonial"
+                  "$ref": "#/components/schemas/Review"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Testimonial"
+          "Review"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Testimonial"
+                  "$ref": "#/components/schemas/Review"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Testimonial"
+          "Review"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewTestimonial"
+                "$ref": "#/components/schemas/NewReview"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Testimonial"
+          "Review"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Testimonial": {
+      "Review": {
         "required": [
           "id"
         ],
@@ -605,7 +605,7 @@
           }
         }
       },
-      "NewTestimonial": {
+      "NewReview": {
         "properties": {
           "name": {
             "type": "string"
@@ -639,7 +639,7 @@
   },
   "tags": [
     {
-      "name": "Testimonial"
+      "name": "Review"
     }
   ]
 }

@@ -1,7 +1,7 @@
 'use strict';
 
 /**
-* Lifecycle callbacks for the `Testimonial` model.
+* Lifecycle callbacks for the `Review` model.
 * Read the documentation (https://strapi.io/documentation/v3.x/concepts/models.html#lifecycle-hooks)
 * to customize this model
 * Creating slugs: ttps://strapi.io/documentation/3.0.0-beta.x/guides/slug.html#create-attributes
@@ -17,12 +17,12 @@ const slugify = require('slugify');
 //         if (options.method === 'insert' && attrs.name) {
 
 //             model.set('slug', slugify(attrs.name.toLowerCase()));
-//             model.set('contenttype', 'testimonial');
+//             model.set('contenttype', 'review');
 
 //         } else if (options.method === 'update' && attrs.name) {
 
 //             attrs.slug = slugify(attrs.name.toLowerCase());
-//             attrs.contenttype = 'testimonial';
+//             attrs.contenttype = 'review';
 //         }
 //     },
 // };
@@ -39,8 +39,8 @@ const slugify = require('slugify');
 //        data.slug = slugify(data.name.toLowerCase());
 //       }
 
-//       // Set content type to 'testimonial'
-//       data.contenttype = 'testimonial';
+//       // Set content type to 'review'
+//       data.contenttype = 'review';
 //     },
 
 //     async beforeUpdate(params, data) {
@@ -48,8 +48,8 @@ const slugify = require('slugify');
 //         data.slug = slugify(data.name.toLowerCase());
 //       }
 
-//       // Set content type to 'testimonial'
-//       data.contenttype = 'testimonial';
+//       // Set content type to 'review'
+//       data.contenttype = 'review';
 //     },
 //   },
 // };
@@ -64,8 +64,8 @@ module.exports = {
         data.slug = slugify(data.name.toLowerCase());
       }
 
-      // Set content type to 'testimonial'
-      data.contenttype = 'testimonial';
+      // Set content type to 'review'
+      data.contenttype = 'review';
     },
 
     beforeUpdate: async (params, data) => {
@@ -74,17 +74,17 @@ module.exports = {
         data.slug = slugify(data.name.toLowerCase());
       }
 
-      // Set content type to 'testimonial'
-      data.contenttype = 'testimonial';
+      // Set content type to 'review'
+      data.contenttype = 'review';
 
-      const [previous_] = await strapi.services.testimonial.find(params);
+      const [previous_] = await strapi.services.review.find(params);
       data.previous_ = previous_;
     },
 
     afterCreate: async (result, data) => {
       strapi.services.history.create({
         action: 'create',
-        contenttype: 'testimonial',
+        contenttype: 'review',
         author: data.author_,
         before: {},
         after: result
@@ -94,7 +94,7 @@ module.exports = {
     afterUpdate: async (result, params, data) => {
       strapi.services.history.create({
         action: 'update',
-        contenttype: 'testimonial',
+        contenttype: 'review',
         author: data.author_,
         before: data.previous_,
         after: result
