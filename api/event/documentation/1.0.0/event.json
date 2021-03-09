@@ -718,6 +718,9 @@
           "keep_on_homepage": {
             "type": "boolean"
           },
+          "editing_guide": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -862,6 +865,9 @@
           },
           "keep_on_homepage": {
             "type": "boolean"
+          },
+          "editing_guide": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

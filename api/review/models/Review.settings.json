@@ -16,12 +16,6 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "image": {
-      "model": "file",
-      "via": "related",
-      "plugin": "upload",
-      "required": false
-    },
     "name": {
       "type": "string"
     },

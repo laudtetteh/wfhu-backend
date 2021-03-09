@@ -125,6 +125,9 @@
     },
     "keep_on_homepage": {
       "type": "boolean"
+    },
+    "editing_guide": {
+      "type": "string"
     }
   }
 }
