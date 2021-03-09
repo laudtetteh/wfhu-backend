@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "03/09/2021 1:30:43 PM"
+    "x-generation-date": "03/09/2021 2:38:58 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -7385,7 +7385,8 @@
                         "page.intro-cta",
                         "page.connect-cta",
                         "page.row-of-gifs",
-                        "page.single-image"
+                        "page.single-image",
+                        "page.row-of-posts"
                       ]
                     },
                     "id": {
@@ -7479,7 +7480,8 @@
                         "page.intro-cta",
                         "page.connect-cta",
                         "page.row-of-gifs",
-                        "page.single-image"
+                        "page.single-image",
+                        "page.row-of-posts"
                       ]
                     },
                     "id": {
@@ -7513,7 +7515,8 @@
                         "page.intro-cta",
                         "page.connect-cta",
                         "page.row-of-gifs",
-                        "page.single-image"
+                        "page.single-image",
+                        "page.row-of-posts"
                       ]
                     },
                     "id": {
@@ -7613,7 +7616,8 @@
                         "page.intro-cta",
                         "page.connect-cta",
                         "page.row-of-gifs",
-                        "page.single-image"
+                        "page.single-image",
+                        "page.row-of-posts"
                       ]
                     },
                     "id": {
@@ -7676,6 +7680,73 @@
                           "type": "object"
                         },
                         "related": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "page.intro-cta",
+                        "page.connect-cta",
+                        "page.row-of-gifs",
+                        "page.single-image",
+                        "page.row-of-posts"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "posts": {
+                      "required": [
+                        "id",
+                        "name"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "slug": {
+                          "type": "string"
+                        },
+                        "description": {
+                          "type": "string"
+                        },
+                        "image": {
+                          "type": "string"
+                        },
+                        "publish_at": {
+                          "type": "string"
+                        },
+                        "category": {
+                          "type": "string"
+                        },
+                        "seo": {
+                          "type": "component"
+                        },
+                        "previous_": {
+                          "type": "object"
+                        },
+                        "author_": {
+                          "type": "object"
+                        },
+                        "published_at": {
                           "type": "string"
                         },
                         "created_by": {
@@ -7777,7 +7848,8 @@
                         "page.intro-cta",
                         "page.connect-cta",
                         "page.row-of-gifs",
-                        "page.single-image"
+                        "page.single-image",
+                        "page.row-of-posts"
                       ]
                     },
                     "id": {
@@ -7871,7 +7943,8 @@
                         "page.intro-cta",
                         "page.connect-cta",
                         "page.row-of-gifs",
-                        "page.single-image"
+                        "page.single-image",
+                        "page.row-of-posts"
                       ]
                     },
                     "id": {
@@ -7905,7 +7978,8 @@
                         "page.intro-cta",
                         "page.connect-cta",
                         "page.row-of-gifs",
-                        "page.single-image"
+                        "page.single-image",
+                        "page.row-of-posts"
                       ]
                     },
                     "id": {
@@ -8005,7 +8079,8 @@
                         "page.intro-cta",
                         "page.connect-cta",
                         "page.row-of-gifs",
-                        "page.single-image"
+                        "page.single-image",
+                        "page.row-of-posts"
                       ]
                     },
                     "id": {
@@ -8068,6 +8143,73 @@
                           "type": "object"
                         },
                         "related": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "page.intro-cta",
+                        "page.connect-cta",
+                        "page.row-of-gifs",
+                        "page.single-image",
+                        "page.row-of-posts"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "posts": {
+                      "required": [
+                        "id",
+                        "name"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "slug": {
+                          "type": "string"
+                        },
+                        "description": {
+                          "type": "string"
+                        },
+                        "image": {
+                          "type": "string"
+                        },
+                        "publish_at": {
+                          "type": "string"
+                        },
+                        "category": {
+                          "type": "string"
+                        },
+                        "seo": {
+                          "type": "component"
+                        },
+                        "previous_": {
+                          "type": "object"
+                        },
+                        "author_": {
+                          "type": "object"
+                        },
+                        "published_at": {
                           "type": "string"
                         },
                         "created_by": {
