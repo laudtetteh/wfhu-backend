@@ -2,13 +2,11 @@
   "collectionName": "components_universals_socials",
   "info": {
     "name": "social",
-    "icon": "compress-arrows-alt"
+    "icon": "compress-arrows-alt",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "youtube": {
-      "type": "string"
-    },
     "instagram": {
       "type": "string"
     },

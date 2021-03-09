@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "03/09/2021 11:00:35 AM"
+    "x-generation-date": "03/09/2021 1:30:43 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -7382,31 +7382,6 @@
                     "__component": {
                       "type": "string",
                       "enum": [
-                        "page.no-of-posts-to-show",
-                        "page.intro-cta",
-                        "page.connect-cta",
-                        "page.row-of-gifs",
-                        "page.single-image"
-                      ]
-                    },
-                    "id": {
-                      "type": "string"
-                    },
-                    "no_of_posts": {
-                      "type": "integer",
-                      "default": 3
-                    }
-                  },
-                  "required": [
-                    "id"
-                  ]
-                },
-                {
-                  "properties": {
-                    "__component": {
-                      "type": "string",
-                      "enum": [
-                        "page.no-of-posts-to-show",
                         "page.intro-cta",
                         "page.connect-cta",
                         "page.row-of-gifs",
@@ -7501,7 +7476,6 @@
                     "__component": {
                       "type": "string",
                       "enum": [
-                        "page.no-of-posts-to-show",
                         "page.intro-cta",
                         "page.connect-cta",
                         "page.row-of-gifs",
@@ -7536,7 +7510,6 @@
                     "__component": {
                       "type": "string",
                       "enum": [
-                        "page.no-of-posts-to-show",
                         "page.intro-cta",
                         "page.connect-cta",
                         "page.row-of-gifs",
@@ -7637,7 +7610,6 @@
                     "__component": {
                       "type": "string",
                       "enum": [
-                        "page.no-of-posts-to-show",
                         "page.intro-cta",
                         "page.connect-cta",
                         "page.row-of-gifs",
@@ -7802,31 +7774,6 @@
                     "__component": {
                       "type": "string",
                       "enum": [
-                        "page.no-of-posts-to-show",
-                        "page.intro-cta",
-                        "page.connect-cta",
-                        "page.row-of-gifs",
-                        "page.single-image"
-                      ]
-                    },
-                    "id": {
-                      "type": "string"
-                    },
-                    "no_of_posts": {
-                      "type": "integer",
-                      "default": 3
-                    }
-                  },
-                  "required": [
-                    "id"
-                  ]
-                },
-                {
-                  "properties": {
-                    "__component": {
-                      "type": "string",
-                      "enum": [
-                        "page.no-of-posts-to-show",
                         "page.intro-cta",
                         "page.connect-cta",
                         "page.row-of-gifs",
@@ -7921,7 +7868,6 @@
                     "__component": {
                       "type": "string",
                       "enum": [
-                        "page.no-of-posts-to-show",
                         "page.intro-cta",
                         "page.connect-cta",
                         "page.row-of-gifs",
@@ -7956,7 +7902,6 @@
                     "__component": {
                       "type": "string",
                       "enum": [
-                        "page.no-of-posts-to-show",
                         "page.intro-cta",
                         "page.connect-cta",
                         "page.row-of-gifs",
@@ -8057,7 +8002,6 @@
                     "__component": {
                       "type": "string",
                       "enum": [
-                        "page.no-of-posts-to-show",
                         "page.intro-cta",
                         "page.connect-cta",
                         "page.row-of-gifs",
@@ -8545,9 +8489,6 @@
               "id": {
                 "type": "string"
               },
-              "youtube": {
-                "type": "string"
-              },
               "instagram": {
                 "type": "string"
               },
@@ -8573,9 +8514,6 @@
             ],
             "properties": {
               "id": {
-                "type": "string"
-              },
-              "youtube": {
                 "type": "string"
               },
               "instagram": {

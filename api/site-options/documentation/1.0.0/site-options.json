@@ -332,9 +332,6 @@
               "id": {
                 "type": "string"
               },
-              "youtube": {
-                "type": "string"
-              },
               "instagram": {
                 "type": "string"
               },
@@ -360,9 +357,6 @@
             ],
             "properties": {
               "id": {
-                "type": "string"
-              },
-              "youtube": {
                 "type": "string"
               },
               "instagram": {

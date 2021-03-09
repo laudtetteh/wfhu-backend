@@ -583,31 +583,6 @@
                     "__component": {
                       "type": "string",
                       "enum": [
-                        "page.no-of-posts-to-show",
-                        "page.intro-cta",
-                        "page.connect-cta",
-                        "page.row-of-gifs",
-                        "page.single-image"
-                      ]
-                    },
-                    "id": {
-                      "type": "string"
-                    },
-                    "no_of_posts": {
-                      "type": "integer",
-                      "default": 3
-                    }
-                  },
-                  "required": [
-                    "id"
-                  ]
-                },
-                {
-                  "properties": {
-                    "__component": {
-                      "type": "string",
-                      "enum": [
-                        "page.no-of-posts-to-show",
                         "page.intro-cta",
                         "page.connect-cta",
                         "page.row-of-gifs",
@@ -702,7 +677,6 @@
                     "__component": {
                       "type": "string",
                       "enum": [
-                        "page.no-of-posts-to-show",
                         "page.intro-cta",
                         "page.connect-cta",
                         "page.row-of-gifs",
@@ -737,7 +711,6 @@
                     "__component": {
                       "type": "string",
                       "enum": [
-                        "page.no-of-posts-to-show",
                         "page.intro-cta",
                         "page.connect-cta",
                         "page.row-of-gifs",
@@ -838,7 +811,6 @@
                     "__component": {
                       "type": "string",
                       "enum": [
-                        "page.no-of-posts-to-show",
                         "page.intro-cta",
                         "page.connect-cta",
                         "page.row-of-gifs",
@@ -1003,31 +975,6 @@
                     "__component": {
                       "type": "string",
                       "enum": [
-                        "page.no-of-posts-to-show",
-                        "page.intro-cta",
-                        "page.connect-cta",
-                        "page.row-of-gifs",
-                        "page.single-image"
-                      ]
-                    },
-                    "id": {
-                      "type": "string"
-                    },
-                    "no_of_posts": {
-                      "type": "integer",
-                      "default": 3
-                    }
-                  },
-                  "required": [
-                    "id"
-                  ]
-                },
-                {
-                  "properties": {
-                    "__component": {
-                      "type": "string",
-                      "enum": [
-                        "page.no-of-posts-to-show",
                         "page.intro-cta",
                         "page.connect-cta",
                         "page.row-of-gifs",
@@ -1122,7 +1069,6 @@
                     "__component": {
                       "type": "string",
                       "enum": [
-                        "page.no-of-posts-to-show",
                         "page.intro-cta",
                         "page.connect-cta",
                         "page.row-of-gifs",
@@ -1157,7 +1103,6 @@
                     "__component": {
                       "type": "string",
                       "enum": [
-                        "page.no-of-posts-to-show",
                         "page.intro-cta",
                         "page.connect-cta",
                         "page.row-of-gifs",
@@ -1258,7 +1203,6 @@
                     "__component": {
                       "type": "string",
                       "enum": [
-                        "page.no-of-posts-to-show",
                         "page.intro-cta",
                         "page.connect-cta",
                         "page.row-of-gifs",
