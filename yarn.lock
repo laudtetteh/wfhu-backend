@@ -1033,6 +1033,13 @@
   dependencies:
     sift "^13.0.0"
 
+"@ckeditor/ckeditor5-react@^3.0.1":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-react/-/ckeditor5-react-3.0.2.tgz#257466959cf5c6e16ed3dd3afe860e4c177dd156"
+  integrity sha512-hOAREzVUp8dwE8vV8qgxIGBOJzaxCm8N2aEhtbCq6QZbGLW9dckdfGKVmbtgEnCQgueVXEUqfDyUIXM6LtXDHA==
+  dependencies:
+    prop-types "^15.7.2"
+
 "@emotion/cache@^10.0.27", "@emotion/cache@^10.0.9":
   version "10.0.29"
   resolved "https://registry.yarnpkg.com/@emotion/cache/-/cache-10.0.29.tgz#87e7e64f412c060102d589fe7c6dc042e6f9d1e0"
@@ -3216,6 +3223,11 @@ circular-json@^0.3.1:
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/circular-json/-/circular-json-0.3.3.tgz#815c99ea84f6809529d2f45791bdf82711352d66"
   integrity sha512-UZK3NBx2Mca+b5LsG7bY183pHWt5Y1xts4P3Pz7ENTwGVnJOUWbRb3ocjvX7hx9tq/yTAdclXm9sZ38gNuem4A==
+
+ckeditor5-build-strapi-wysiwyg@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/ckeditor5-build-strapi-wysiwyg/-/ckeditor5-build-strapi-wysiwyg-1.7.0.tgz#a6702fba97a5f32c615f2dfb650d1726ab178aeb"
+  integrity sha512-uM/RzIaJixLnDgc4i2A4+j+pWd1+9nUCOOSn05bmrYVz0LaYlm/YmrV8f1BBt5mYPjMYXgTJpZvPxxzOMtPuYw==
 
 class-utils@^0.3.5:
   version "0.3.6"
@@ -10755,6 +10767,14 @@ strapi-helper-plugin@3.2.5:
     reactstrap "8.4.1"
     styled-components "^5.0.0"
     whatwg-fetch "^3.3.1"
+
+strapi-plugin-ckeditor5@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/strapi-plugin-ckeditor5/-/strapi-plugin-ckeditor5-1.7.0.tgz#c3dabf6afff1a01822ad94035cbc52d1933c4e99"
+  integrity sha512-Lr5P1zmVmjRKnX2kuLkg0EMEPPhIC5jogHspCl8U8u2rnI8UghdxDa9cn2c2Zq7/Qr+UaimnCQi9tu7Kxl/XZQ==
+  dependencies:
+    "@ckeditor/ckeditor5-react" "^3.0.1"
+    ckeditor5-build-strapi-wysiwyg "^1.7.0"
 
 strapi-plugin-content-manager@3.2.5:
   version "3.2.5"
