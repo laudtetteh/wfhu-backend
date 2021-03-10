@@ -588,7 +588,8 @@
                         "page.row-of-gifs",
                         "page.single-image",
                         "page.row-of-posts",
-                        "page.row-of-reviews"
+                        "page.row-of-reviews",
+                        "page.row-of-events"
                       ]
                     },
                     "id": {
@@ -684,7 +685,8 @@
                         "page.row-of-gifs",
                         "page.single-image",
                         "page.row-of-posts",
-                        "page.row-of-reviews"
+                        "page.row-of-reviews",
+                        "page.row-of-events"
                       ]
                     },
                     "id": {
@@ -720,7 +722,8 @@
                         "page.row-of-gifs",
                         "page.single-image",
                         "page.row-of-posts",
-                        "page.row-of-reviews"
+                        "page.row-of-reviews",
+                        "page.row-of-events"
                       ]
                     },
                     "id": {
@@ -822,7 +825,8 @@
                         "page.row-of-gifs",
                         "page.single-image",
                         "page.row-of-posts",
-                        "page.row-of-reviews"
+                        "page.row-of-reviews",
+                        "page.row-of-events"
                       ]
                     },
                     "id": {
@@ -910,7 +914,8 @@
                         "page.row-of-gifs",
                         "page.single-image",
                         "page.row-of-posts",
-                        "page.row-of-reviews"
+                        "page.row-of-reviews",
+                        "page.row-of-events"
                       ]
                     },
                     "id": {
@@ -978,7 +983,8 @@
                         "page.row-of-gifs",
                         "page.single-image",
                         "page.row-of-posts",
-                        "page.row-of-reviews"
+                        "page.row-of-reviews",
+                        "page.row-of-events"
                       ]
                     },
                     "id": {
@@ -1006,6 +1012,95 @@
                         },
                         "author_": {
                           "type": "object"
+                        },
+                        "published_at": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "page.intro-cta",
+                        "page.connect-cta",
+                        "page.row-of-gifs",
+                        "page.single-image",
+                        "page.row-of-posts",
+                        "page.row-of-reviews",
+                        "page.row-of-events"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "events": {
+                      "required": [
+                        "id",
+                        "name",
+                        "event_start",
+                        "event_ended"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "slug": {
+                          "type": "string"
+                        },
+                        "description": {
+                          "type": "string"
+                        },
+                        "image": {
+                          "type": "string"
+                        },
+                        "publish_at": {
+                          "type": "string"
+                        },
+                        "seo": {
+                          "type": "component"
+                        },
+                        "previous_": {
+                          "type": "object"
+                        },
+                        "author_": {
+                          "type": "object"
+                        },
+                        "event_start": {
+                          "type": "string"
+                        },
+                        "event_end": {
+                          "type": "string"
+                        },
+                        "event_details": {
+                          "type": "string"
+                        },
+                        "event_ended": {
+                          "type": "boolean"
+                        },
+                        "event_timezone": {
+                          "type": "string"
+                        },
+                        "keep_on_homepage": {
+                          "type": "boolean"
+                        },
+                        "editing_guide": {
+                          "type": "string"
                         },
                         "published_at": {
                           "type": "string"
@@ -1111,7 +1206,8 @@
                         "page.row-of-gifs",
                         "page.single-image",
                         "page.row-of-posts",
-                        "page.row-of-reviews"
+                        "page.row-of-reviews",
+                        "page.row-of-events"
                       ]
                     },
                     "id": {
@@ -1207,7 +1303,8 @@
                         "page.row-of-gifs",
                         "page.single-image",
                         "page.row-of-posts",
-                        "page.row-of-reviews"
+                        "page.row-of-reviews",
+                        "page.row-of-events"
                       ]
                     },
                     "id": {
@@ -1243,7 +1340,8 @@
                         "page.row-of-gifs",
                         "page.single-image",
                         "page.row-of-posts",
-                        "page.row-of-reviews"
+                        "page.row-of-reviews",
+                        "page.row-of-events"
                       ]
                     },
                     "id": {
@@ -1345,7 +1443,8 @@
                         "page.row-of-gifs",
                         "page.single-image",
                         "page.row-of-posts",
-                        "page.row-of-reviews"
+                        "page.row-of-reviews",
+                        "page.row-of-events"
                       ]
                     },
                     "id": {
@@ -1433,7 +1532,8 @@
                         "page.row-of-gifs",
                         "page.single-image",
                         "page.row-of-posts",
-                        "page.row-of-reviews"
+                        "page.row-of-reviews",
+                        "page.row-of-events"
                       ]
                     },
                     "id": {
@@ -1501,7 +1601,8 @@
                         "page.row-of-gifs",
                         "page.single-image",
                         "page.row-of-posts",
-                        "page.row-of-reviews"
+                        "page.row-of-reviews",
+                        "page.row-of-events"
                       ]
                     },
                     "id": {
@@ -1529,6 +1630,95 @@
                         },
                         "author_": {
                           "type": "object"
+                        },
+                        "published_at": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "page.intro-cta",
+                        "page.connect-cta",
+                        "page.row-of-gifs",
+                        "page.single-image",
+                        "page.row-of-posts",
+                        "page.row-of-reviews",
+                        "page.row-of-events"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "events": {
+                      "required": [
+                        "id",
+                        "name",
+                        "event_start",
+                        "event_ended"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "slug": {
+                          "type": "string"
+                        },
+                        "description": {
+                          "type": "string"
+                        },
+                        "image": {
+                          "type": "string"
+                        },
+                        "publish_at": {
+                          "type": "string"
+                        },
+                        "seo": {
+                          "type": "component"
+                        },
+                        "previous_": {
+                          "type": "object"
+                        },
+                        "author_": {
+                          "type": "object"
+                        },
+                        "event_start": {
+                          "type": "string"
+                        },
+                        "event_end": {
+                          "type": "string"
+                        },
+                        "event_details": {
+                          "type": "string"
+                        },
+                        "event_ended": {
+                          "type": "boolean"
+                        },
+                        "event_timezone": {
+                          "type": "string"
+                        },
+                        "keep_on_homepage": {
+                          "type": "boolean"
+                        },
+                        "editing_guide": {
+                          "type": "string"
                         },
                         "published_at": {
                           "type": "string"

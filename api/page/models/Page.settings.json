@@ -50,7 +50,8 @@
         "page.row-of-gifs",
         "page.single-image",
         "page.row-of-posts",
-        "page.row-of-reviews"
+        "page.row-of-reviews",
+        "page.row-of-events"
       ]
     },
     "description": {
