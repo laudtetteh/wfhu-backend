@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "03/10/2021 12:24:56 AM"
+    "x-generation-date": "03/10/2021 8:03:29 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -7392,7 +7392,8 @@
                         "page.connect-cta",
                         "page.row-of-gifs",
                         "page.single-image",
-                        "page.row-of-posts"
+                        "page.row-of-posts",
+                        "page.row-of-reviews"
                       ]
                     },
                     "id": {
@@ -7487,7 +7488,8 @@
                         "page.connect-cta",
                         "page.row-of-gifs",
                         "page.single-image",
-                        "page.row-of-posts"
+                        "page.row-of-posts",
+                        "page.row-of-reviews"
                       ]
                     },
                     "id": {
@@ -7522,7 +7524,8 @@
                         "page.connect-cta",
                         "page.row-of-gifs",
                         "page.single-image",
-                        "page.row-of-posts"
+                        "page.row-of-posts",
+                        "page.row-of-reviews"
                       ]
                     },
                     "id": {
@@ -7623,7 +7626,8 @@
                         "page.connect-cta",
                         "page.row-of-gifs",
                         "page.single-image",
-                        "page.row-of-posts"
+                        "page.row-of-posts",
+                        "page.row-of-reviews"
                       ]
                     },
                     "id": {
@@ -7710,7 +7714,8 @@
                         "page.connect-cta",
                         "page.row-of-gifs",
                         "page.single-image",
-                        "page.row-of-posts"
+                        "page.row-of-posts",
+                        "page.row-of-reviews"
                       ]
                     },
                     "id": {
@@ -7745,6 +7750,61 @@
                         },
                         "seo": {
                           "type": "component"
+                        },
+                        "previous_": {
+                          "type": "object"
+                        },
+                        "author_": {
+                          "type": "object"
+                        },
+                        "published_at": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "page.intro-cta",
+                        "page.connect-cta",
+                        "page.row-of-gifs",
+                        "page.single-image",
+                        "page.row-of-posts",
+                        "page.row-of-reviews"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "reviews": {
+                      "required": [
+                        "id"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "description": {
+                          "type": "string"
+                        },
+                        "publish_at": {
+                          "type": "string"
                         },
                         "previous_": {
                           "type": "object"
@@ -7855,7 +7915,8 @@
                         "page.connect-cta",
                         "page.row-of-gifs",
                         "page.single-image",
-                        "page.row-of-posts"
+                        "page.row-of-posts",
+                        "page.row-of-reviews"
                       ]
                     },
                     "id": {
@@ -7950,7 +8011,8 @@
                         "page.connect-cta",
                         "page.row-of-gifs",
                         "page.single-image",
-                        "page.row-of-posts"
+                        "page.row-of-posts",
+                        "page.row-of-reviews"
                       ]
                     },
                     "id": {
@@ -7985,7 +8047,8 @@
                         "page.connect-cta",
                         "page.row-of-gifs",
                         "page.single-image",
-                        "page.row-of-posts"
+                        "page.row-of-posts",
+                        "page.row-of-reviews"
                       ]
                     },
                     "id": {
@@ -8086,7 +8149,8 @@
                         "page.connect-cta",
                         "page.row-of-gifs",
                         "page.single-image",
-                        "page.row-of-posts"
+                        "page.row-of-posts",
+                        "page.row-of-reviews"
                       ]
                     },
                     "id": {
@@ -8173,7 +8237,8 @@
                         "page.connect-cta",
                         "page.row-of-gifs",
                         "page.single-image",
-                        "page.row-of-posts"
+                        "page.row-of-posts",
+                        "page.row-of-reviews"
                       ]
                     },
                     "id": {
@@ -8208,6 +8273,61 @@
                         },
                         "seo": {
                           "type": "component"
+                        },
+                        "previous_": {
+                          "type": "object"
+                        },
+                        "author_": {
+                          "type": "object"
+                        },
+                        "published_at": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "page.intro-cta",
+                        "page.connect-cta",
+                        "page.row-of-gifs",
+                        "page.single-image",
+                        "page.row-of-posts",
+                        "page.row-of-reviews"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "reviews": {
+                      "required": [
+                        "id"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "description": {
+                          "type": "string"
+                        },
+                        "publish_at": {
+                          "type": "string"
                         },
                         "previous_": {
                           "type": "object"
