@@ -66,23 +66,23 @@ module.exports = {
                 }
             });
 
-        async function sendMail(payload) {
+            async function sendMail(payload) {
 
-            const options = {
-                to: process.env.DEFAULT_TO,
-                from: payload.full_name,
-                subject: 'Contact Form Message from WfHUniv',
-                text: _template(payload),
-            }
+                const options = {
+                    to: process.env.DEFAULT_TO,
+                    from: payload.email,
+                    subject: 'Message from WfHUniv Contact Form',
+                    text: _template(payload),
+                }
 
-            try {
-                await strapi.plugins['email'].services.email.send(options)
+                try {
+                    await strapi.plugins['email'].services.email.send(options)
+                }
+                catch(err) {
+                    console.log("Something went wrong. Message could not be sent.");
+                    console.log(err);
+                }
             }
-            catch(err) {
-                console.log("Something went wrong. Message could not be sent.");
-                console.log(err);
-            }
-        }
 
         return entity;
     },

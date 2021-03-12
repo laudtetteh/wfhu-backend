@@ -29,3 +29,22 @@ module.exports = ({ env }) => ({
 //   }
 // });
 
+// nodemailer configuration
+module.exports = ({ env }) => ({
+  email: {
+    provider: 'nodemailer',
+    providerOptions: {
+      host: env('EM_SMTP_HOST', "smtp.elasticemail.com"),
+      port: env('EM_SMTP_PORT', 2525),
+      auth: {
+        user: env('EM_SMTP_USERNAME', "vendors@studiotenfour.com"),
+        pass: env('EM_SMTP_PASSWORD', "76FF2A5A56882268FA43B75669F0F468C95F"),
+      },
+      // ... any custom nodemailer options
+    },
+    settings: {
+      defaultFrom: env('DEFAULT_FROM', "vendors@studiotenfour.com"),
+      defaultReplyTo: env('DEFAULT_REPLY_TO', "vendors@studiotenfour.com"),
+    },
+  },
+});
