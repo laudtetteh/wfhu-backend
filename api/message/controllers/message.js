@@ -70,7 +70,7 @@ module.exports = {
 
                 const options = {
                     to: process.env.DEFAULT_TO,
-                    from: payload.email,
+                    from: process.env.DEFAULT_FROM,
                     subject: 'Message from WfHUniv Contact Form',
                     text: _template(payload),
                 }
