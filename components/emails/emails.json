@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_emails_emails",
+  "info": {
+    "name": "Emails",
+    "icon": "envelope"
+  },
+  "options": {},
+  "attributes": {
+    "email_header_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

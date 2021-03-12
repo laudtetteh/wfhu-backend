@@ -15,6 +15,11 @@
       "type": "component",
       "repeatable": false,
       "component": "universals.social"
+    },
+    "emails": {
+      "type": "component",
+      "repeatable": false,
+      "component": "emails.emails"
     }
   }
 }
