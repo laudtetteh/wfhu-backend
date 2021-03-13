@@ -5,7 +5,8 @@
 */
 const { parseMultipartData, sanitizeEntity } = require('strapi-utils');
 const fetch = require("node-fetch");
-const _template = require('../../../utils/email_template');
+const _admin_email = require('../../../utils/admin_email_template');
+const _guest_email = require('../../../utils/guest_email_template');
 require('dotenv').config();
 
 module.exports = {
@@ -33,7 +34,7 @@ module.exports = {
 
         payload.first_name = entity.first_name ? entity.first_name : '';
         payload.last_name = entity.last_name ? entity.last_name : '';
-        payload.full_name = entity.name ? entity.name : `${payload.n} ${payload.last_name}`;
+        payload.full_name = entity.name ? entity.name : `${payload.first_name} ${payload.last_name}`;
         payload.email = entity.email ? entity.email : '';
         payload.phone = entity.phone ? entity.phone : '';
         payload.subject = entity.subject ? entity.subject : '';
@@ -43,7 +44,7 @@ module.exports = {
         const siteOptionsEndpoint = `${siteurl}/site-options`;
 
         // send an email by using the email plugin
-        async function sendMail() {
+        async function sendEmail() {
 
             await fetch(siteOptionsEndpoint)
                 .then(response => response.text())
@@ -64,7 +65,8 @@ module.exports = {
                             payload.social = siteOptions.social;
                         }
 
-                    sendAdminMail(payload);
+                    sendAdminEmail(payload);
+                    // sendGuestEmail(payload);
 
                     } catch(err) {
                         // Didn't work. Log error here
@@ -73,14 +75,14 @@ module.exports = {
                     }
                 });
 
-                async function sendAdminMail(payload) {
-console.log(payload)
+                async function sendAdminEmail(payload) {
+
                     try {
                         const options = {
                             to: payload.forward_messages_to,
                             from: "vendors@studiotenfour.com",
                             subject: 'Message from WfHUniv Contact Form',
-                            text: _template(payload),
+                            text: _admin_email(payload),
                         }
 
                         await strapi.plugins['email'].services.email.send(options)
@@ -93,7 +95,7 @@ console.log(payload)
                 }
         }
 
-        sendMail();
+        sendEmail();
 
         return entity;
     },

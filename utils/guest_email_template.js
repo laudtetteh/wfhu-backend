@@ -1,4 +1,6 @@
-function _template(payload) {
+function _guest_email(payload) {
+
+    // console.log(payload);
 
     return `<!DOCTYPE html>
 
@@ -139,4 +141,4 @@ function _template(payload) {
     </html>`
 }
 
-module.exports = _template;
+module.exports = _guest_email;
