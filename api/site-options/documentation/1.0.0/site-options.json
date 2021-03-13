@@ -349,7 +349,8 @@
           "emails": {
             "type": "object",
             "required": [
-              "id"
+              "id",
+              "forward_messages_to"
             ],
             "properties": {
               "id": {
@@ -421,6 +422,9 @@
                     "type": "string"
                   }
                 }
+              },
+              "forward_messages_to": {
+                "type": "string"
               }
             }
           }
@@ -454,7 +458,8 @@
           "emails": {
             "type": "object",
             "required": [
-              "id"
+              "id",
+              "forward_messages_to"
             ],
             "properties": {
               "id": {
@@ -526,6 +531,9 @@
                     "type": "string"
                   }
                 }
+              },
+              "forward_messages_to": {
+                "type": "string"
               }
             }
           },

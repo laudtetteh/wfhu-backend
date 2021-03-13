@@ -33,7 +33,7 @@ module.exports = {
 
         payload.first_name = entity.first_name ? entity.first_name : '';
         payload.last_name = entity.last_name ? entity.last_name : '';
-        payload.full_name = `${payload.first_name} ${payload.last_name}`;
+        payload.full_name = entity.name ? entity.name : `${payload.n} ${payload.last_name}`;
         payload.email = entity.email ? entity.email : '';
         payload.phone = entity.phone ? entity.phone : '';
         payload.subject = entity.subject ? entity.subject : '';
@@ -43,46 +43,57 @@ module.exports = {
         const siteOptionsEndpoint = `${siteurl}/site-options`;
 
         // send an email by using the email plugin
-        fetch(siteOptionsEndpoint)
-            .then(response => response.text())
-            .then(text => {
-                try {
-                    const siteOptions = JSON.parse(text);
-                    // Set up `payload` properties here
-                    if( siteOptions.emails.email_header_image && siteOptions.emails.email_header_image.url ) {
-                        payload.header_image = `${siteurl}${siteOptions.emails.email_header_image.url}`
+        async function sendMail() {
+
+            await fetch(siteOptionsEndpoint)
+                .then(response => response.text())
+                .then(text => {
+                    try {
+                        const siteOptions = JSON.parse(text);
+
+                        // Set up `payload` properties here
+                        if( siteOptions.emails.email_header_image && siteOptions.emails.email_header_image.url ) {
+                            payload.header_image = `${siteurl}${siteOptions.emails.email_header_image.url}`
+                        }
+
+                        if( siteOptions.emails.forward_messages_to ) {
+                            payload.forward_messages_to = siteOptions.emails.forward_messages_to;
+                        }
+
+                        if( siteOptions.social ) {
+                            payload.social = siteOptions.social;
+                        }
+
+                    sendAdminMail(payload);
+
+                    } catch(err) {
+                        // Didn't work. Log error here
+                        console.log("Something went wrong. Site options could not be retrieved.");
+                        console.log(err);
+                    }
+                });
+
+                async function sendAdminMail(payload) {
+console.log(payload)
+                    try {
+                        const options = {
+                            to: payload.forward_messages_to,
+                            from: "vendors@studiotenfour.com",
+                            subject: 'Message from WfHUniv Contact Form',
+                            text: _template(payload),
+                        }
+
+                        await strapi.plugins['email'].services.email.send(options)
                     }
 
-                    if( siteOptions.social ) {
-                        payload.social = siteOptions.social;
+                    catch(err) {
+                        console.log("Something went wrong. Message could not be sent.");
+                        console.log(err);
                     }
-
-                sendMail(payload);
-
-                } catch(err) {
-                    // Didn't work. Log error here
-                    console.log("Something went wrong. Site options could not be retrieved.");
-                    console.log(err);
                 }
-            });
+        }
 
-            async function sendMail(payload) {
-
-                const options = {
-                    to: process.env.DEFAULT_TO,
-                    from: process.env.DEFAULT_FROM,
-                    subject: 'Message from WfHUniv Contact Form',
-                    text: _template(payload),
-                }
-
-                try {
-                    await strapi.plugins['email'].services.email.send(options)
-                }
-                catch(err) {
-                    console.log("Something went wrong. Message could not be sent.");
-                    console.log(err);
-                }
-            }
+        sendMail();
 
         return entity;
     },
