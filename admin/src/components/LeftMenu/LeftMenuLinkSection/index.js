@@ -1,9 +1,9 @@
 /*
-* Customize admin leftMenu
+* Customize admin leftMenu. Optional - currently reverted back to original;
+* follow commenting in this file to re-enable hiding Messages link in leftMenu
 * https://github.com/strapi/strapi/issues/900#issuecomment-707131253
 *
 */
-
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import matchSorter from 'match-sorter';
@@ -33,6 +33,11 @@ const LeftMenuLinksSection = ({
     'label'
   );
 
+
+
+
+
+
   return (
     <>
       <LeftMenuLinkHeader
@@ -41,63 +46,78 @@ const LeftMenuLinksSection = ({
         setSearch={setSearch}
         search={search}
       />
-
-
-      {/* <LeftMenuListLink shrink={shrink}>
-      //   {filteredList.length > 0 ? (
-      //     filteredList.map((link, index) => (
-      //       <LeftMenuLink
-      //         location={location}
-      //         // There is no id or unique value in the link object for the moment.
-      //         // eslint-disable-next-line react/no-array-index-key
-      //         key={index}
-      //         iconName={link.icon}
-      //         label={link.label}
-      //         destination={link.destination}
-      //       />
-      //     ))
-      //   ) : (
-      //     <EmptyLinksListWrapper>
-      //       <FormattedMessage id={emptyLinksListMessage} defaultMessage="No plugins installed yet">
-      //         {msg => <EmptyLinksList>{msg}</EmptyLinksList>}
-      //       </FormattedMessage>
-      //     </EmptyLinksListWrapp
-      //   )}
-      // </LeftMenuListLink>*/}
-
-
-      {/*------------- STF Modified `LeftMenuListLink` code -----------------*/}
-        <LeftMenuListLink shrink={shrink}>
-          {filteredList.length > 0 ? (
-            filteredList.map((link, index) => {
-              {/*------- Hide `Messages` Content Type from left menu*/}
-              if(link.label !== 'Messages') {
-                return <LeftMenuLink
-                          location={location}
-                          //There is no id or unique value in the link object for the moment.
-                          //eslint-disable-next-line react/no-array-index-key
-                          key={index}
-                          iconName={link.icon}
-                          label={link.label}
-                          destination={link.destination}
-                        />
-
-              }
-              {/*------- ./Hide `Messages` Content Type from left menu*/}
-            })
-          ) : (
-            <EmptyLinksListWrapper>
-              <FormattedMessage id={emptyLinksListMessage} defaultMessage="No plugins installed yet">
-                {msg => <EmptyLinksList>{msg}</EmptyLinksList>}
-              </FormattedMessage>
-            </EmptyLinksListWrapper>
-          )}
-        </LeftMenuListLink>
-      {/*------------- ./STF Modified `LeftMenuListLink` code -----------------*/}
-
-
+      <LeftMenuListLink shrink={shrink}>
+        {filteredList.length > 0 ? (
+          filteredList.map((link, index) => (
+            <LeftMenuLink
+              location={location}
+              // There is no id or unique value in the link object for the moment.
+              // eslint-disable-next-line react/no-array-index-key
+              key={index}
+              iconName={link.icon}
+              label={link.label}
+              destination={link.destination}
+            />
+          ))
+        ) : (
+          <EmptyLinksListWrapper>
+            <FormattedMessage id={emptyLinksListMessage} defaultMessage="No plugins installed yet">
+              {msg => <EmptyLinksList>{msg}</EmptyLinksList>}
+            </FormattedMessage>
+          </EmptyLinksListWrapper>
+        )}
+      </LeftMenuListLink>
     </>
   );
+
+
+
+
+
+  //  return (
+  //   <>
+  //     <LeftMenuLinkHeader
+  //       section={section}
+  //       searchable={searchable}
+  //       setSearch={setSearch}
+  //       search={search}
+  //     />
+
+  //     {/*------------- STF Modified `LeftMenuListLink` code -----------------*/}
+  //       <LeftMenuListLink shrink={shrink}>
+  //         {filteredList.length > 0 ? (
+  //           filteredList.map((link, index) => {
+  //             {/*------- Hide `Messages` Content Type from left menu*/}
+  //             if(link.label !== 'Messages') {
+  //               return <LeftMenuLink
+  //                         location={location}
+  //                         //There is no id or unique value in the link object for the moment.
+  //                         //eslint-disable-next-line react/no-array-index-key
+  //                         key={index}
+  //                         iconName={link.icon}
+  //                         label={link.label}
+  //                         destination={link.destination}
+  //                       />
+
+  //             }
+  //             {/*------- ./Hide `Messages` Content Type from left menu*/}
+  //           })
+  //         ) : (
+  //           <EmptyLinksListWrapper>
+  //             <FormattedMessage id={emptyLinksListMessage} defaultMessage="No plugins installed yet">
+  //               {msg => <EmptyLinksList>{msg}</EmptyLinksList>}
+  //             </FormattedMessage>
+  //           </EmptyLinksListWrapper>
+  //         )}
+  //       </LeftMenuListLink>
+  //     {/*------------- ./STF Modified `LeftMenuListLink` code -----------------*/}
+
+
+  //   </>
+  // );
+
+
+
 };
 
 LeftMenuLinksSection.defaultProps = {
