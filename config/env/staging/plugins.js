@@ -1,5 +1,5 @@
-///-------- AWS
 module.exports = ({ env }) => ({
+  ///-------- Storage: AWS
   upload: {
     provider: 'aws-s3',
     providerOptions: {
@@ -12,25 +12,8 @@ module.exports = ({ env }) => ({
       },
     },
   },
-});
 
-///-------- Azure
-// module.exports = ({ env }) => ({
-//   upload: {
-//     provider: 'azure-storage',
-//     providerOptions: {
-//       account: env('AZURE_STORAGE_ACCOUNT'),
-//       accountKey: env('AZURE_STORAGE_ACCOUNT_KEY'),
-//       serviceBaseURL: env('AZURE_STORAGE_URL'),
-//       containerName: env('AZURE_STORAGE_CONTAINER_NAME'),
-//       defaultPath: 'assets',
-//       maxConcurrent: 10
-//     }
-//   }
-// });
-
-// nodemailer configuration
-module.exports = ({ env }) => ({
+  ///-------- SMTP: nodemailer
   email: {
     provider: 'nodemailer',
     providerOptions: {
@@ -47,4 +30,17 @@ module.exports = ({ env }) => ({
       defaultReplyTo: env('DEFAULT_REPLY_TO', "vendors@studiotenfour.com"),
     },
   },
+
+  ///-------- Storage: Azure
+  //   upload: {
+  //     provider: 'azure-storage',
+  //     providerOptions: {
+  //       account: env('AZURE_STORAGE_ACCOUNT'),
+  //       accountKey: env('AZURE_STORAGE_ACCOUNT_KEY'),
+  //       serviceBaseURL: env('AZURE_STORAGE_URL'),
+  //       containerName: env('AZURE_STORAGE_CONTAINER_NAME'),
+  //       defaultPath: 'assets',
+  //       maxConcurrent: 10
+  //     }
+  //   }
 });
