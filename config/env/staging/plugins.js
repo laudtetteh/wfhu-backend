@@ -20,8 +20,8 @@ module.exports = ({ env }) => ({
       host: env('EM_SMTP_HOST', "smtp.elasticemail.com"),
       port: env('EM_SMTP_PORT', 2525),
       auth: {
-        user: env('EM_SMTP_USERNAME', "vendors@studiotenfour.com"),
-        pass: env('EM_SMTP_PASSWORD', "76FF2A5A56882268FA43B75669F0F468C95F"),
+        user: env('EM_SMTP_USERNAME', "elisabeth@wfhuniv.com"),
+        pass: env('EM_SMTP_PASSWORD', "0C5F923ECE74175A020AB94F7BE6975F8E7D"),
       },
       // ... any custom nodemailer options
     },
