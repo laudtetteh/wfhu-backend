@@ -54,7 +54,7 @@ module.exports = {
 
                         // Set up `payload` properties here
                         if( siteOptions.emails.email_header_image && siteOptions.emails.email_header_image.url ) {
-                            payload.header_image = `${siteurl}${siteOptions.emails.email_header_image.url}`
+                            payload.header_image = siteOptions.emails.email_header_image.url;
                         }
 
                         if( siteOptions.emails.forward_messages_to ) {
