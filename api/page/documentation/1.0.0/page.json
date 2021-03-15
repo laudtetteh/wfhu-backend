@@ -936,7 +936,7 @@
                         "slug": {
                           "type": "string"
                         },
-                        "description": {
+                        "description_": {
                           "type": "string"
                         },
                         "image": {
@@ -956,6 +956,9 @@
                         },
                         "author_": {
                           "type": "object"
+                        },
+                        "description": {
+                          "type": "string"
                         },
                         "published_at": {
                           "type": "string"
@@ -1001,7 +1004,7 @@
                         "name": {
                           "type": "string"
                         },
-                        "description": {
+                        "description_": {
                           "type": "string"
                         },
                         "publish_at": {
@@ -1012,6 +1015,9 @@
                         },
                         "author_": {
                           "type": "object"
+                        },
+                        "description": {
+                          "type": "string"
                         },
                         "published_at": {
                           "type": "string"
@@ -1063,7 +1069,7 @@
                         "slug": {
                           "type": "string"
                         },
-                        "description": {
+                        "description_": {
                           "type": "string"
                         },
                         "image": {
@@ -1100,6 +1106,9 @@
                           "type": "boolean"
                         },
                         "editing_guide": {
+                          "type": "string"
+                        },
+                        "description": {
                           "type": "string"
                         },
                         "published_at": {
@@ -1554,7 +1563,7 @@
                         "slug": {
                           "type": "string"
                         },
-                        "description": {
+                        "description_": {
                           "type": "string"
                         },
                         "image": {
@@ -1574,6 +1583,9 @@
                         },
                         "author_": {
                           "type": "object"
+                        },
+                        "description": {
+                          "type": "string"
                         },
                         "published_at": {
                           "type": "string"
@@ -1619,7 +1631,7 @@
                         "name": {
                           "type": "string"
                         },
-                        "description": {
+                        "description_": {
                           "type": "string"
                         },
                         "publish_at": {
@@ -1630,6 +1642,9 @@
                         },
                         "author_": {
                           "type": "object"
+                        },
+                        "description": {
+                          "type": "string"
                         },
                         "published_at": {
                           "type": "string"
@@ -1681,7 +1696,7 @@
                         "slug": {
                           "type": "string"
                         },
-                        "description": {
+                        "description_": {
                           "type": "string"
                         },
                         "image": {
@@ -1718,6 +1733,9 @@
                           "type": "boolean"
                         },
                         "editing_guide": {
+                          "type": "string"
+                        },
+                        "description": {
                           "type": "string"
                         },
                         "published_at": {

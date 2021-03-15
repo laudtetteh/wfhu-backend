@@ -19,7 +19,7 @@
     "name": {
       "type": "string"
     },
-    "description": {
+    "description_": {
       "type": "text"
     },
     "publish_at": {
@@ -32,6 +32,9 @@
     "author_": {
       "private": true,
       "type": "json"
+    },
+    "description": {
+      "type": "richtext"
     }
   }
 }

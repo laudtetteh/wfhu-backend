@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "03/14/2021 9:14:04 PM"
+    "x-generation-date": "03/15/2021 8:02:09 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -7193,7 +7193,7 @@
                 "slug": {
                   "type": "string"
                 },
-                "description": {
+                "description_": {
                   "type": "string"
                 },
                 "image": {
@@ -7213,6 +7213,9 @@
                 },
                 "author_": {
                   "type": "object"
+                },
+                "description": {
+                  "type": "string"
                 },
                 "published_at": {
                   "type": "string"
@@ -7276,7 +7279,7 @@
           "slug": {
             "type": "string"
           },
-          "description": {
+          "description_": {
             "type": "string"
           },
           "image": {
@@ -7466,6 +7469,9 @@
           "editing_guide": {
             "type": "string"
           },
+          "description": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -7485,7 +7491,7 @@
           "slug": {
             "type": "string"
           },
-          "description": {
+          "description_": {
             "type": "string"
           },
           "publish_at": {
@@ -7612,6 +7618,9 @@
             "type": "boolean"
           },
           "editing_guide": {
+            "type": "string"
+          },
+          "description": {
             "type": "string"
           },
           "published_at": {
@@ -8322,7 +8331,7 @@
                         "slug": {
                           "type": "string"
                         },
-                        "description": {
+                        "description_": {
                           "type": "string"
                         },
                         "image": {
@@ -8342,6 +8351,9 @@
                         },
                         "author_": {
                           "type": "object"
+                        },
+                        "description": {
+                          "type": "string"
                         },
                         "published_at": {
                           "type": "string"
@@ -8387,7 +8399,7 @@
                         "name": {
                           "type": "string"
                         },
-                        "description": {
+                        "description_": {
                           "type": "string"
                         },
                         "publish_at": {
@@ -8398,6 +8410,9 @@
                         },
                         "author_": {
                           "type": "object"
+                        },
+                        "description": {
+                          "type": "string"
                         },
                         "published_at": {
                           "type": "string"
@@ -8449,7 +8464,7 @@
                         "slug": {
                           "type": "string"
                         },
-                        "description": {
+                        "description_": {
                           "type": "string"
                         },
                         "image": {
@@ -8486,6 +8501,9 @@
                           "type": "boolean"
                         },
                         "editing_guide": {
+                          "type": "string"
+                        },
+                        "description": {
                           "type": "string"
                         },
                         "published_at": {
@@ -8940,7 +8958,7 @@
                         "slug": {
                           "type": "string"
                         },
-                        "description": {
+                        "description_": {
                           "type": "string"
                         },
                         "image": {
@@ -8960,6 +8978,9 @@
                         },
                         "author_": {
                           "type": "object"
+                        },
+                        "description": {
+                          "type": "string"
                         },
                         "published_at": {
                           "type": "string"
@@ -9005,7 +9026,7 @@
                         "name": {
                           "type": "string"
                         },
-                        "description": {
+                        "description_": {
                           "type": "string"
                         },
                         "publish_at": {
@@ -9016,6 +9037,9 @@
                         },
                         "author_": {
                           "type": "object"
+                        },
+                        "description": {
+                          "type": "string"
                         },
                         "published_at": {
                           "type": "string"
@@ -9067,7 +9091,7 @@
                         "slug": {
                           "type": "string"
                         },
-                        "description": {
+                        "description_": {
                           "type": "string"
                         },
                         "image": {
@@ -9104,6 +9128,9 @@
                           "type": "boolean"
                         },
                         "editing_guide": {
+                          "type": "string"
+                        },
+                        "description": {
                           "type": "string"
                         },
                         "published_at": {
@@ -9155,7 +9182,7 @@
           "slug": {
             "type": "string"
           },
-          "description": {
+          "description_": {
             "type": "string"
           },
           "image": {
@@ -9304,6 +9331,9 @@
               }
             }
           },
+          "description": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -9321,7 +9351,7 @@
           "slug": {
             "type": "string"
           },
-          "description": {
+          "description_": {
             "type": "string"
           },
           "publish_at": {
@@ -9378,6 +9408,9 @@
           "author_": {
             "type": "object"
           },
+          "description": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -9401,12 +9434,15 @@
           "name": {
             "type": "string"
           },
-          "description": {
+          "description_": {
             "type": "string"
           },
           "publish_at": {
             "type": "string",
             "format": "date-time"
+          },
+          "description": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -9419,7 +9455,7 @@
           "name": {
             "type": "string"
           },
-          "description": {
+          "description_": {
             "type": "string"
           },
           "publish_at": {
@@ -9431,6 +9467,9 @@
           },
           "author_": {
             "type": "object"
+          },
+          "description": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

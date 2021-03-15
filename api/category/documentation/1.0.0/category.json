@@ -542,7 +542,7 @@
                 "slug": {
                   "type": "string"
                 },
-                "description": {
+                "description_": {
                   "type": "string"
                 },
                 "image": {
@@ -562,6 +562,9 @@
                 },
                 "author_": {
                   "type": "object"
+                },
+                "description": {
+                  "type": "string"
                 },
                 "published_at": {
                   "type": "string"

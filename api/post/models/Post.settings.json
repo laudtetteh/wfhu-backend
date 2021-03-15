@@ -24,7 +24,7 @@
     "slug": {
       "type": "string"
     },
-    "description": {
+    "description_": {
       "type": "text"
     },
     "image": {
@@ -56,6 +56,9 @@
     "author_": {
       "private": true,
       "type": "json"
+    },
+    "description": {
+      "type": "richtext"
     }
   }
 }
