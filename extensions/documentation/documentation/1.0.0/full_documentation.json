@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "03/15/2021 8:02:09 PM"
+    "x-generation-date": "03/15/2021 11:07:53 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -7181,7 +7181,8 @@
             "items": {
               "required": [
                 "id",
-                "name"
+                "name",
+                "excerpt"
               ],
               "properties": {
                 "id": {
@@ -7215,6 +7216,9 @@
                   "type": "object"
                 },
                 "description": {
+                  "type": "string"
+                },
+                "excerpt": {
                   "type": "string"
                 },
                 "published_at": {
@@ -8319,7 +8323,8 @@
                     "posts": {
                       "required": [
                         "id",
-                        "name"
+                        "name",
+                        "excerpt"
                       ],
                       "properties": {
                         "id": {
@@ -8353,6 +8358,9 @@
                           "type": "object"
                         },
                         "description": {
+                          "type": "string"
+                        },
+                        "excerpt": {
                           "type": "string"
                         },
                         "published_at": {
@@ -8946,7 +8954,8 @@
                     "posts": {
                       "required": [
                         "id",
-                        "name"
+                        "name",
+                        "excerpt"
                       ],
                       "properties": {
                         "id": {
@@ -8980,6 +8989,9 @@
                           "type": "object"
                         },
                         "description": {
+                          "type": "string"
+                        },
+                        "excerpt": {
                           "type": "string"
                         },
                         "published_at": {
@@ -9170,7 +9182,8 @@
       "Post": {
         "required": [
           "id",
-          "name"
+          "name",
+          "excerpt"
         ],
         "properties": {
           "id": {
@@ -9334,6 +9347,11 @@
           "description": {
             "type": "string"
           },
+          "excerpt": {
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 70
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -9342,7 +9360,8 @@
       },
       "NewPost": {
         "required": [
-          "name"
+          "name",
+          "excerpt"
         ],
         "properties": {
           "name": {
@@ -9410,6 +9429,11 @@
           },
           "description": {
             "type": "string"
+          },
+          "excerpt": {
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 70
           },
           "published_at": {
             "type": "string",

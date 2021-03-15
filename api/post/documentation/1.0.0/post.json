@@ -517,7 +517,8 @@
       "Post": {
         "required": [
           "id",
-          "name"
+          "name",
+          "excerpt"
         ],
         "properties": {
           "id": {
@@ -681,6 +682,11 @@
           "description": {
             "type": "string"
           },
+          "excerpt": {
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 70
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -689,7 +695,8 @@
       },
       "NewPost": {
         "required": [
-          "name"
+          "name",
+          "excerpt"
         ],
         "properties": {
           "name": {
@@ -757,6 +764,11 @@
           },
           "description": {
             "type": "string"
+          },
+          "excerpt": {
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 70
           },
           "published_at": {
             "type": "string",

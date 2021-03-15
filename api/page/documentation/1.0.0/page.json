@@ -924,7 +924,8 @@
                     "posts": {
                       "required": [
                         "id",
-                        "name"
+                        "name",
+                        "excerpt"
                       ],
                       "properties": {
                         "id": {
@@ -958,6 +959,9 @@
                           "type": "object"
                         },
                         "description": {
+                          "type": "string"
+                        },
+                        "excerpt": {
                           "type": "string"
                         },
                         "published_at": {
@@ -1551,7 +1555,8 @@
                     "posts": {
                       "required": [
                         "id",
-                        "name"
+                        "name",
+                        "excerpt"
                       ],
                       "properties": {
                         "id": {
@@ -1585,6 +1590,9 @@
                           "type": "object"
                         },
                         "description": {
+                          "type": "string"
+                        },
+                        "excerpt": {
                           "type": "string"
                         },
                         "published_at": {
