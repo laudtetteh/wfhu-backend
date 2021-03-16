@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_homepage_row_of_gifs",
+  "info": {
+    "name": "row_of_gifs",
+    "icon": "photo-video"
+  },
+  "options": {},
+  "attributes": {
+    "gif": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

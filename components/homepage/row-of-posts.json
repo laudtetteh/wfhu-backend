@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_homepage_row_of_posts",
+  "info": {
+    "name": "row_of_posts",
+    "icon": "paperclip"
+  },
+  "options": {},
+  "attributes": {
+    "posts": {
+      "collection": "post"
+    }
+  }
+}

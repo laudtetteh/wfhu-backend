@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_homepage_row_of_events",
+  "info": {
+    "name": "row_of_events",
+    "icon": "calendar"
+  },
+  "options": {},
+  "attributes": {
+    "events": {
+      "collection": "event"
+    }
+  }
+}
