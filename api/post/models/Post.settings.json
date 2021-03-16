@@ -64,7 +64,7 @@
       "type": "text",
       "maxLength": 200,
       "required": true,
-      "minLength": 70
+      "minLength": 20
     }
   }
 }

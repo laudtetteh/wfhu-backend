@@ -685,7 +685,7 @@
           "excerpt": {
             "type": "string",
             "maxLength": 200,
-            "minLength": 70
+            "minLength": 20
           },
           "published_at": {
             "type": "string",
@@ -768,7 +768,7 @@
           "excerpt": {
             "type": "string",
             "maxLength": 200,
-            "minLength": 70
+            "minLength": 20
           },
           "published_at": {
             "type": "string",
