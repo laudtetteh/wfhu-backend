@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_page_rowof_reviews",
+  "info": {
+    "name": "rowof_reviews",
+    "icon": "comment-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "review": {
+      "type": "text"
+    },
+    "reviewer_name": {
+      "type": "string"
+    }
+  }
+}

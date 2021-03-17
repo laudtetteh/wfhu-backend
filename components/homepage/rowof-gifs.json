@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_homepage_rowof_gifs",
+  "info": {
+    "name": "rowof_gifs",
+    "icon": "camera-retro"
+  },
+  "options": {},
+  "attributes": {
+    "gif": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

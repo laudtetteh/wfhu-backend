@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "03/16/2021 7:50:55 PM"
+    "x-generation-date": "03/17/2021 9:48:51 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -8244,55 +8244,27 @@
               }
             }
           },
-          "row_of_reviews": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "reviews": {
-                "required": [
-                  "id"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "description_": {
-                    "type": "string"
-                  },
-                  "publish_at": {
-                    "type": "string"
-                  },
-                  "previous_": {
-                    "type": "object"
-                  },
-                  "author_": {
-                    "type": "object"
-                  },
-                  "description": {
-                    "type": "string"
-                  },
-                  "published_at": {
-                    "type": "string"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
-                  }
+          "rowof_reviews": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "review": {
+                  "type": "string"
+                },
+                "reviewer_name": {
+                  "type": "string"
                 }
               }
             }
           },
-          "row_of_gifs": {
+          "rowof_gifs": {
             "type": "array",
             "items": {
               "type": "object",
@@ -8373,149 +8345,127 @@
               }
             }
           },
-          "row_of_events": {
-            "type": "object",
+          "rowof_events": {
             "required": [
-              "id"
+              "id",
+              "name",
+              "event_start",
+              "event_ended"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "events": {
-                "required": [
-                  "id",
-                  "name",
-                  "event_start",
-                  "event_ended"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "slug": {
-                    "type": "string"
-                  },
-                  "description_": {
-                    "type": "string"
-                  },
-                  "image": {
-                    "type": "string"
-                  },
-                  "publish_at": {
-                    "type": "string"
-                  },
-                  "seo": {
-                    "type": "component"
-                  },
-                  "previous_": {
-                    "type": "object"
-                  },
-                  "author_": {
-                    "type": "object"
-                  },
-                  "event_start": {
-                    "type": "string"
-                  },
-                  "event_end": {
-                    "type": "string"
-                  },
-                  "event_details": {
-                    "type": "string"
-                  },
-                  "event_ended": {
-                    "type": "boolean"
-                  },
-                  "event_timezone": {
-                    "type": "string"
-                  },
-                  "keep_on_homepage": {
-                    "type": "boolean"
-                  },
-                  "editing_guide": {
-                    "type": "string"
-                  },
-                  "description": {
-                    "type": "string"
-                  },
-                  "published_at": {
-                    "type": "string"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
-                  }
-                }
+              "name": {
+                "type": "string"
+              },
+              "slug": {
+                "type": "string"
+              },
+              "description_": {
+                "type": "string"
+              },
+              "image": {
+                "type": "string"
+              },
+              "publish_at": {
+                "type": "string"
+              },
+              "seo": {
+                "type": "component"
+              },
+              "previous_": {
+                "type": "object"
+              },
+              "author_": {
+                "type": "object"
+              },
+              "event_start": {
+                "type": "string"
+              },
+              "event_end": {
+                "type": "string"
+              },
+              "event_details": {
+                "type": "string"
+              },
+              "event_ended": {
+                "type": "boolean"
+              },
+              "event_timezone": {
+                "type": "string"
+              },
+              "keep_on_homepage": {
+                "type": "boolean"
+              },
+              "editing_guide": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
-          "row_of_posts": {
-            "type": "object",
+          "rowof_posts": {
             "required": [
-              "id"
+              "id",
+              "name",
+              "excerpt"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "posts": {
-                "required": [
-                  "id",
-                  "name",
-                  "excerpt"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "slug": {
-                    "type": "string"
-                  },
-                  "description_": {
-                    "type": "string"
-                  },
-                  "image": {
-                    "type": "string"
-                  },
-                  "publish_at": {
-                    "type": "string"
-                  },
-                  "category": {
-                    "type": "string"
-                  },
-                  "seo": {
-                    "type": "component"
-                  },
-                  "previous_": {
-                    "type": "object"
-                  },
-                  "author_": {
-                    "type": "object"
-                  },
-                  "description": {
-                    "type": "string"
-                  },
-                  "excerpt": {
-                    "type": "string"
-                  },
-                  "published_at": {
-                    "type": "string"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
-                  }
-                }
+              "name": {
+                "type": "string"
+              },
+              "slug": {
+                "type": "string"
+              },
+              "description_": {
+                "type": "string"
+              },
+              "image": {
+                "type": "string"
+              },
+              "publish_at": {
+                "type": "string"
+              },
+              "category": {
+                "type": "string"
+              },
+              "seo": {
+                "type": "component"
+              },
+              "previous_": {
+                "type": "object"
+              },
+              "author_": {
+                "type": "object"
+              },
+              "description": {
+                "type": "string"
+              },
+              "excerpt": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -8613,55 +8563,27 @@
               }
             }
           },
-          "row_of_reviews": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "reviews": {
-                "required": [
-                  "id"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "description_": {
-                    "type": "string"
-                  },
-                  "publish_at": {
-                    "type": "string"
-                  },
-                  "previous_": {
-                    "type": "object"
-                  },
-                  "author_": {
-                    "type": "object"
-                  },
-                  "description": {
-                    "type": "string"
-                  },
-                  "published_at": {
-                    "type": "string"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
-                  }
+          "rowof_reviews": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "review": {
+                  "type": "string"
+                },
+                "reviewer_name": {
+                  "type": "string"
                 }
               }
             }
           },
-          "row_of_gifs": {
+          "rowof_gifs": {
             "type": "array",
             "items": {
               "type": "object",
@@ -8742,151 +8664,11 @@
               }
             }
           },
-          "row_of_events": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "events": {
-                "required": [
-                  "id",
-                  "name",
-                  "event_start",
-                  "event_ended"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "slug": {
-                    "type": "string"
-                  },
-                  "description_": {
-                    "type": "string"
-                  },
-                  "image": {
-                    "type": "string"
-                  },
-                  "publish_at": {
-                    "type": "string"
-                  },
-                  "seo": {
-                    "type": "component"
-                  },
-                  "previous_": {
-                    "type": "object"
-                  },
-                  "author_": {
-                    "type": "object"
-                  },
-                  "event_start": {
-                    "type": "string"
-                  },
-                  "event_end": {
-                    "type": "string"
-                  },
-                  "event_details": {
-                    "type": "string"
-                  },
-                  "event_ended": {
-                    "type": "boolean"
-                  },
-                  "event_timezone": {
-                    "type": "string"
-                  },
-                  "keep_on_homepage": {
-                    "type": "boolean"
-                  },
-                  "editing_guide": {
-                    "type": "string"
-                  },
-                  "description": {
-                    "type": "string"
-                  },
-                  "published_at": {
-                    "type": "string"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
+          "rowof_events": {
+            "type": "string"
           },
-          "row_of_posts": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "posts": {
-                "required": [
-                  "id",
-                  "name",
-                  "excerpt"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "slug": {
-                    "type": "string"
-                  },
-                  "description_": {
-                    "type": "string"
-                  },
-                  "image": {
-                    "type": "string"
-                  },
-                  "publish_at": {
-                    "type": "string"
-                  },
-                  "category": {
-                    "type": "string"
-                  },
-                  "seo": {
-                    "type": "component"
-                  },
-                  "previous_": {
-                    "type": "object"
-                  },
-                  "author_": {
-                    "type": "object"
-                  },
-                  "description": {
-                    "type": "string"
-                  },
-                  "excerpt": {
-                    "type": "string"
-                  },
-                  "published_at": {
-                    "type": "string"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
+          "rowof_posts": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

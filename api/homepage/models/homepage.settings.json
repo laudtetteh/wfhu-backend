@@ -16,25 +16,21 @@
       "repeatable": false,
       "component": "homepage.intro-cta"
     },
-    "row_of_reviews": {
-      "type": "component",
-      "repeatable": false,
-      "component": "homepage.reviews"
-    },
-    "row_of_gifs": {
+    "rowof_reviews": {
       "type": "component",
       "repeatable": true,
-      "component": "homepage.row-of-gifs"
+      "component": "page.rowof-reviews"
     },
-    "row_of_events": {
+    "rowof_gifs": {
       "type": "component",
-      "repeatable": false,
-      "component": "homepage.row-of-events"
+      "repeatable": true,
+      "component": "homepage.rowof-gifs"
     },
-    "row_of_posts": {
-      "type": "component",
-      "repeatable": false,
-      "component": "homepage.row-of-posts"
+    "rowof_events": {
+      "collection": "event"
+    },
+    "rowof_posts": {
+      "collection": "post"
     }
   }
 }
