@@ -76,7 +76,6 @@ module.exports = {
 
       // Set content type to 'post'
       data.contenttype = 'post';
-
       const [previous_] = await strapi.services.post.find(params);
       data.previous_ = previous_;
     },
@@ -92,6 +91,12 @@ module.exports = {
     },
 
     afterUpdate: async (result, params, data) => {
+      // If a `publish_at` value exists, then set `published_at` to that
+      strapi.services.post.update(
+        { id: params._id },
+        { published_at: result.publish_at }
+      );
+
       strapi.services.history.create({
         action: 'update',
         contenttype: 'post',
@@ -102,7 +107,3 @@ module.exports = {
     }
   },
 };
-
-
-
-

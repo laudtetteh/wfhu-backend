@@ -401,6 +401,10 @@
                     "type": "string"
                   }
                 }
+              },
+              "intro_form_blurb": {
+                "type": "string",
+                "maxLength": 130
               }
             }
           },
@@ -770,6 +774,10 @@
                     "type": "string"
                   }
                 }
+              },
+              "intro_form_blurb": {
+                "type": "string",
+                "maxLength": 130
               }
             }
           },
