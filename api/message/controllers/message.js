@@ -80,7 +80,7 @@ module.exports = {
                     try {
                         const options = {
                             to: payload.forward_messages_to,
-                            from: "vendors@studiotenfour.com",
+                            from: "elisabeth@wfhuniv.com",
                             subject: 'Message from WfHUniv Contact Form',
                             text: _admin_email(payload),
                         }
