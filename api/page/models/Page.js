@@ -65,7 +65,7 @@ module.exports = {
       }
 
       // Set content type to 'page'
-      data.contenttype = 'page';
+      // data.contenttype = 'page';
     },
 
     beforeUpdate: async (params, data) => {
@@ -75,31 +75,31 @@ module.exports = {
       }
 
       // Set content type to 'page'
-      data.contenttype = 'page';
+      // data.contenttype = 'page';
 
-      const [previous_] = await strapi.services.page.find(params);
-      data.previous_ = previous_;
+      // const [previous_] = await strapi.services.page.find(params);
+      // data.previous_ = previous_;
     },
 
-    afterCreate: async (result, data) => {
-      strapi.services.history.create({
-        action: 'create',
-        contenttype: 'page',
-        author: data.author_,
-        before: {},
-        after: result
-      });
-    },
+    // afterCreate: async (result, data) => {
+    //   strapi.services.history.create({
+    //     action: 'create',
+    //     contenttype: 'page',
+    //     author: data.author_,
+    //     before: {},
+    //     after: result
+    //   });
+    // },
 
-    afterUpdate: async (result, params, data) => {
-      strapi.services.history.create({
-        action: 'update',
-        contenttype: 'page',
-        author: data.author_,
-        before: data.previous_,
-        after: result
-      });
-    }
+    // afterUpdate: async (result, params, data) => {
+    //   strapi.services.history.create({
+    //     action: 'update',
+    //     contenttype: 'page',
+    //     author: data.author_,
+    //     before: data.previous_,
+    //     after: result
+    //   });
+    // }
   },
 };
 

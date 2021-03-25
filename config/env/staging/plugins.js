@@ -1,4 +1,15 @@
 module.exports = ({ env }) => ({
+  // GraphQL
+  graphql: {
+    endpoint: '/graphql',
+    shadowCRUD: true,
+    playgroundAlways: false,
+    depthLimit: 7,
+    amountLimit: 100,
+    apolloServer: {
+      tracing: true,
+    },
+  },
   ///-------- Storage: AWS
   upload: {
     provider: 'aws-s3',
@@ -26,8 +37,8 @@ module.exports = ({ env }) => ({
       // ... any custom nodemailer options
     },
     settings: {
-      defaultFrom: env('DEFAULT_FROM', "vendors@studiotenfour.com"),
-      defaultReplyTo: env('DEFAULT_REPLY_TO', "vendors@studiotenfour.com"),
+      defaultFrom: env('DEFAULT_FROM', "elisabeth@wfhuniv.com"),
+      defaultReplyTo: env('DEFAULT_REPLY_TO', "elisabeth@wfhuniv.com"),
     },
   },
 

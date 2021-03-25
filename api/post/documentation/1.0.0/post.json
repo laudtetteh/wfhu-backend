@@ -621,9 +621,6 @@
                   "type": "string"
                 }
               },
-              "previous_": {
-                "type": "object"
-              },
               "author_": {
                 "type": "object"
               },
@@ -660,9 +657,7 @@
                 "items": {
                   "type": "object",
                   "required": [
-                    "id",
-                    "name",
-                    "content"
+                    "id"
                   ],
                   "properties": {
                     "id": {
@@ -737,9 +732,7 @@
                 "items": {
                   "type": "object",
                   "required": [
-                    "id",
-                    "name",
-                    "content"
+                    "id"
                   ],
                   "properties": {
                     "id": {

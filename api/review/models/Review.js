@@ -1,7 +1,7 @@
 'use strict';
 
 /**
-* Lifecycle callbacks for the `Review` model.
+* Lifecycle callbacks for the `Post` model.
 * Read the documentation (https://strapi.io/documentation/v3.x/concepts/models.html#lifecycle-hooks)
 * to customize this model
 * Creating slugs: ttps://strapi.io/documentation/3.0.0-beta.x/guides/slug.html#create-attributes
@@ -65,7 +65,7 @@ module.exports = {
       }
 
       // Set content type to 'review'
-      data.contenttype = 'review';
+      // data.contenttype = 'review';
     },
 
     beforeUpdate: async (params, data) => {
@@ -75,34 +75,35 @@ module.exports = {
       }
 
       // Set content type to 'review'
-      data.contenttype = 'review';
-
-      const [previous_] = await strapi.services.review.find(params);
-      data.previous_ = previous_;
+      // data.contenttype = 'review';
+      // const [previous_] = await strapi.services.review.find(params);
+      // data.previous_ = previous_;
     },
 
-    afterCreate: async (result, data) => {
-      strapi.services.history.create({
-        action: 'create',
-        contenttype: 'review',
-        author: data.author_,
-        before: {},
-        after: result
-      });
-    },
+    // afterCreate: async (result, data) => {
+    //   strapi.services.history.create({
+    //     action: 'create',
+    //     contenttype: 'review',
+    //     author: data.author_,
+    //     before: {},
+    //     after: result
+    //   });
+    // },
 
     afterUpdate: async (result, params, data) => {
-      strapi.services.history.create({
-        action: 'update',
-        contenttype: 'review',
-        author: data.author_,
-        before: data.previous_,
-        after: result
-      });
+      // If a `publish_at` value exists, then set `published_at` to that
+      // strapi.services.review.update(
+      //   { id: params._id },
+      //   { published_at: result.publish_at }
+      // );
+
+      // strapi.services.history.create({
+      //   action: 'update',
+      //   contenttype: 'review',
+      //   author: data.author_,
+      //   before: data.previous_,
+      //   after: result
+      // });
     }
   },
 };
-
-
-
-

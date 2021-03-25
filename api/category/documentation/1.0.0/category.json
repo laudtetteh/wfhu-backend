@@ -598,9 +598,6 @@
               "type": "string"
             }
           },
-          "previous_": {
-            "type": "object"
-          },
           "author_": {
             "type": "object"
           },

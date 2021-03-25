@@ -45,10 +45,6 @@
       "required": false,
       "repeatable": false
     },
-    "previous_": {
-      "private": true,
-      "type": "json"
-    },
     "author_": {
       "private": true,
       "type": "json"

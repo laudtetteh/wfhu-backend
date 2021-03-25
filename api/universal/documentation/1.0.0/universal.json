@@ -532,9 +532,7 @@
           "seo": {
             "type": "object",
             "required": [
-              "id",
-              "title",
-              "description"
+              "id"
             ],
             "properties": {
               "id": {
@@ -551,9 +549,7 @@
                 "items": {
                   "type": "object",
                   "required": [
-                    "id",
-                    "name",
-                    "content"
+                    "id"
                   ],
                   "properties": {
                     "id": {
@@ -616,9 +612,7 @@
           "seo": {
             "type": "object",
             "required": [
-              "id",
-              "title",
-              "description"
+              "id"
             ],
             "properties": {
               "id": {
@@ -635,9 +629,7 @@
                 "items": {
                   "type": "object",
                   "required": [
-                    "id",
-                    "name",
-                    "content"
+                    "id"
                   ],
                   "properties": {
                     "id": {

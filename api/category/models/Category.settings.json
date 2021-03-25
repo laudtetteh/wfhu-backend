@@ -20,10 +20,6 @@
       "via": "category",
       "collection": "post"
     },
-    "previous_": {
-      "private": true,
-      "type": "json"
-    },
     "author_": {
       "private": true,
       "type": "json"

@@ -65,7 +65,7 @@ module.exports = {
       }
 
       // Set content type to 'category'
-      data.contenttype = 'category';
+      // data.contenttype = 'category';
     },
 
     beforeUpdate: async (params, data) => {
@@ -75,31 +75,31 @@ module.exports = {
       }
 
       // Set content type to 'category'
-      data.contenttype = 'category';
+      // data.contenttype = 'category';
 
-      const [previous_] = await strapi.services.category.find(params);
-      data.previous_ = previous_;
+      // const [previous_] = await strapi.services.category.find(params);
+      // data.previous_ = previous_;
     },
 
-    afterCreate: async (result, data) => {
-      strapi.services.history.create({
-        action: 'create',
-        contenttype: 'category',
-        author: data.author_,
-        before: {},
-        after: result
-      });
-    },
+    // afterCreate: async (result, data) => {
+    //   strapi.services.history.create({
+    //     action: 'create',
+    //     contenttype: 'category',
+    //     author: data.author_,
+    //     before: {},
+    //     after: result
+    //   });
+    // },
 
-    afterUpdate: async (result, params, data) => {
-      strapi.services.history.create({
-        action: 'update',
-        contenttype: 'category',
-        author: data.author_,
-        before: data.previous_,
-        after: result
-      });
-    }
+    // afterUpdate: async (result, params, data) => {
+    //   strapi.services.history.create({
+    //     action: 'update',
+    //     contenttype: 'category',
+    //     author: data.author_,
+    //     before: data.previous_,
+    //     after: result
+    //   });
+    // }
   },
 };
 

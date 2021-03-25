@@ -627,9 +627,7 @@
                 "items": {
                   "type": "object",
                   "required": [
-                    "id",
-                    "name",
-                    "content"
+                    "id"
                   ],
                   "properties": {
                     "id": {
@@ -772,9 +770,7 @@
                 "items": {
                   "type": "object",
                   "required": [
-                    "id",
-                    "name",
-                    "content"
+                    "id"
                   ],
                   "properties": {
                     "id": {
@@ -790,9 +786,6 @@
                 }
               }
             }
-          },
-          "previous_": {
-            "type": "object"
           },
           "author_": {
             "type": "object"

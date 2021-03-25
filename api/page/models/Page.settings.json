@@ -34,10 +34,6 @@
       "required": false,
       "repeatable": false
     },
-    "previous_": {
-      "private": true,
-      "type": "json"
-    },
     "author_": {
       "private": true,
       "type": "json"
@@ -45,13 +41,7 @@
     "dynamic_fields": {
       "type": "dynamiczone",
       "components": [
-        "page.intro-cta",
-        "page.connect-cta",
-        "page.row-of-gifs",
-        "page.single-image",
-        "page.row-of-posts",
-        "page.row-of-reviews",
-        "page.row-of-events"
+        "page.single-image"
       ]
     },
     "description": {

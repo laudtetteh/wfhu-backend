@@ -431,12 +431,6 @@
                   "description_": {
                     "type": "string"
                   },
-                  "publish_at": {
-                    "type": "string"
-                  },
-                  "previous_": {
-                    "type": "object"
-                  },
                   "author_": {
                     "type": "object"
                   },
@@ -574,9 +568,6 @@
                   },
                   "seo": {
                     "type": "component"
-                  },
-                  "previous_": {
-                    "type": "object"
                   },
                   "author_": {
                     "type": "object"
@@ -804,12 +795,6 @@
                   "description_": {
                     "type": "string"
                   },
-                  "publish_at": {
-                    "type": "string"
-                  },
-                  "previous_": {
-                    "type": "object"
-                  },
                   "author_": {
                     "type": "object"
                   },
@@ -947,9 +932,6 @@
                   },
                   "seo": {
                     "type": "component"
-                  },
-                  "previous_": {
-                    "type": "object"
                   },
                   "author_": {
                     "type": "object"

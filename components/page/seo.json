@@ -8,12 +8,12 @@
   },
   "attributes": {
     "title": {
-      "required": true,
+      "required": false,
       "type": "string"
     },
     "description": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "meta": {
       "type": "component",

@@ -528,10 +528,6 @@
           "description_": {
             "type": "string"
           },
-          "publish_at": {
-            "type": "string",
-            "format": "date-time"
-          },
           "description": {
             "type": "string"
           },
@@ -548,13 +544,6 @@
           },
           "description_": {
             "type": "string"
-          },
-          "publish_at": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "previous_": {
-            "type": "object"
           },
           "author_": {
             "type": "object"

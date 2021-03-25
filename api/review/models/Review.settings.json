@@ -22,13 +22,6 @@
     "description_": {
       "type": "text"
     },
-    "publish_at": {
-      "type": "datetime"
-    },
-    "previous_": {
-      "private": true,
-      "type": "json"
-    },
     "author_": {
       "private": true,
       "type": "json"
