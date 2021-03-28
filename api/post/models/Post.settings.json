@@ -40,18 +40,14 @@
       "type": "datetime"
     },
     "category": {
-      "model": "category",
-      "via": "posts"
+      "via": "posts",
+      "model": "category"
     },
     "seo": {
       "type": "component",
       "component": "post.seo",
       "required": false,
       "repeatable": false
-    },
-    "previous_": {
-      "private": true,
-      "type": "json"
     },
     "author_": {
       "private": true,
@@ -65,6 +61,9 @@
       "maxLength": 200,
       "required": true,
       "minLength": 20
+    },
+    "keep_on_homepage": {
+      "type": "boolean"
     }
   }
 }

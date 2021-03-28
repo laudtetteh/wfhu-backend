@@ -25,18 +25,11 @@
       "type": "string",
       "unique": false
     },
-    "publish_at": {
-      "type": "datetime"
-    },
     "seo": {
       "type": "component",
       "component": "page.seo",
       "required": false,
       "repeatable": false
-    },
-    "author_": {
-      "private": true,
-      "type": "json"
     },
     "dynamic_fields": {
       "type": "dynamiczone",

@@ -17,12 +17,8 @@
       "unique": true
     },
     "posts": {
-      "via": "category",
-      "collection": "post"
-    },
-    "author_": {
-      "private": true,
-      "type": "json"
+      "collection": "post",
+      "via": "category"
     },
     "slug": {
       "type": "string"

@@ -1,73 +1,60 @@
+const { sanitizeEntity } = require('strapi-utils');
+
 module.exports = {
-  find: async (ctx) => {
-    let categories;
+    find: async (ctx) => {
+        let entities;
 
-    if (ctx.query._q) {
+        if (ctx.query._q) {
+            entities = await strapi.api.category.services.category.search(ctx.query);
+        } else {
+            entities = await strapi.api.category.services.category.find(ctx.query);
+        }
 
-        // categories = await strapi.api.category.services.category.search(ctx.query);
-        categories = await strapi.api.category.services.category.search({})
-            .select({
-            id: 1,
-            name: 1,
-            slug: 1,
-        })
-        .populate('post', [
-            'id',
-            'name',
-            'slug',
-            'excerpt',
-            'description',
-            'image',
-            'category'
-        ]); //populate 'category' relation and populate its 'id', 'name', 'slug' fields
+        return entities.map(entity => {
+            const category = sanitizeEntity(entity, {
+                model: strapi.models.category,
+            });
 
-    } else {
+            if (category.previous_ ) {
+                delete category.previous_;
+            }
 
-      // categories = await strapi.api.category.services.category.find(ctx.query);
-      categories = await strapi.query('category').model.find({})
-      .select({
-            id: 1,
-            name: 1,
-            slug: 1,
-        })
-        .populate('post', [
-            'id',
-            'name',
-            'slug',
-            'excerpt',
-            'description',
-            'image',
-            'category'
-        ]);
+            if( category.posts ) {
+                category.posts.map(post => {
+                    if( post.previous_ ) {
+                        delete post.previous_;
+                    }
+                });
+            }
+
+            return category;
+        });
+    },
+
+    findOne: async (ctx) => {
+        const { id } = ctx.params;
+        let entity = await strapi.api.category.services.category.findOne({ id });
+
+        if (!entity) {
+            return ctx.notFound();
+        }
+
+        const category = sanitizeEntity(entity, {
+            model: strapi.models.category,
+        });
+
+        if (category.previous_ ) {
+            delete category.previous_;
+        }
+
+        if( category.posts ) {
+            category.posts.map(post => {
+                if( post.previous_ ) {
+                    delete post.previous_;
+                }
+            });
+        }
+
+        return category;
     }
-
-    return categories;
-  },
-
-  findOne: async (ctx) => {
-    const { id } = ctx.params;
-    // let category = await strapi.api.category.services.category.findOne({ id });
-
-    let category = await strapi.query('category').model.findOne({ id })
-    .select({
-        id: 1,
-        name: 1,
-        slug: 1,
-    })
-    .populate('post', [
-        'id',
-        'name',
-        'slug',
-        'excerpt',
-        'description',
-        'image',
-        'category'
-    ]);
-
-    if (!category) {
-      return ctx.notFound();
-    }
-
-    return category;
-  }
 };

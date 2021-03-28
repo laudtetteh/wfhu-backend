@@ -63,9 +63,6 @@ module.exports = {
       if (data.name) {
         data.slug = slugify(data.name.toLowerCase());
       }
-
-      // Set content type to 'review'
-      // data.contenttype = 'review';
     },
 
     beforeUpdate: async (params, data) => {
@@ -73,37 +70,11 @@ module.exports = {
       if (data.name) {
         data.slug = slugify(data.name.toLowerCase());
       }
-
-      // Set content type to 'review'
-      // data.contenttype = 'review';
-      // const [previous_] = await strapi.services.review.find(params);
-      // data.previous_ = previous_;
     },
 
-    // afterCreate: async (result, data) => {
-    //   strapi.services.history.create({
-    //     action: 'create',
-    //     contenttype: 'review',
-    //     author: data.author_,
-    //     before: {},
-    //     after: result
-    //   });
-    // },
 
     afterUpdate: async (result, params, data) => {
-      // If a `publish_at` value exists, then set `published_at` to that
-      // strapi.services.review.update(
-      //   { id: params._id },
-      //   { published_at: result.publish_at }
-      // );
 
-      // strapi.services.history.create({
-      //   action: 'update',
-      //   contenttype: 'review',
-      //   author: data.author_,
-      //   before: data.previous_,
-      //   after: result
-      // });
     }
   },
 };

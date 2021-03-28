@@ -531,9 +531,6 @@
           "slug": {
             "type": "string"
           },
-          "description_": {
-            "type": "string"
-          },
           "image": {
             "required": [
               "id",
@@ -739,9 +736,6 @@
             "type": "string"
           },
           "slug": {
-            "type": "string"
-          },
-          "description_": {
             "type": "string"
           },
           "publish_at": {

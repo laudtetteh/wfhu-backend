@@ -24,9 +24,6 @@
     "slug": {
       "type": "string"
     },
-    "description_": {
-      "type": "text"
-    },
     "image": {
       "model": "file",
       "via": "related",

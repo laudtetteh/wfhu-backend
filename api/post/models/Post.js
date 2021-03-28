@@ -65,7 +65,7 @@ module.exports = {
       }
 
       // Set content type to 'post'
-      // data.contenttype = 'post';
+      data.contenttype = 'post';
     },
 
     beforeUpdate: async (params, data) => {
@@ -75,35 +75,17 @@ module.exports = {
       }
 
       // Set content type to 'post'
-      // data.contenttype = 'post';
-      // const [previous_] = await strapi.services.post.find(params);
-      // data.previous_ = previous_;
+      data.contenttype = 'post';
     },
-
-    // afterCreate: async (result, data) => {
-    //   strapi.services.history.create({
-    //     action: 'create',
-    //     contenttype: 'post',
-    //     author: data.author_,
-    //     before: {},
-    //     after: result
-    //   });
-    // },
 
     afterUpdate: async (result, params, data) => {
       // If a `publish_at` value exists, then set `published_at` to that
-      strapi.services.post.update(
-        { id: params._id },
-        { published_at: result.publish_at }
-      );
-
-      // strapi.services.history.create({
-      //   action: 'update',
-      //   contenttype: 'post',
-      //   author: data.author_,
-      //   before: data.previous_,
-      //   after: result
-      // });
+      if( result.publish_at ) {
+        strapi.services.post.update(
+          { id: params._id },
+          { published_at: result.publish_at }
+        );
+      }
     }
   },
 };

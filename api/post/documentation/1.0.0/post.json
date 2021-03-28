@@ -621,9 +621,6 @@
                   "type": "string"
                 }
               },
-              "author_": {
-                "type": "object"
-              },
               "slug": {
                 "type": "string"
               },
@@ -681,6 +678,9 @@
             "type": "string",
             "maxLength": 200,
             "minLength": 20
+          },
+          "keep_on_homepage": {
+            "type": "boolean"
           },
           "published_at": {
             "type": "string",
@@ -749,9 +749,6 @@
               }
             }
           },
-          "previous_": {
-            "type": "object"
-          },
           "author_": {
             "type": "object"
           },
@@ -762,6 +759,9 @@
             "type": "string",
             "maxLength": 200,
             "minLength": 20
+          },
+          "keep_on_homepage": {
+            "type": "boolean"
           },
           "published_at": {
             "type": "string",

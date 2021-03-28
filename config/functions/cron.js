@@ -9,17 +9,32 @@
  */
 
 module.exports = {
-  '*/1 * * * * *': async () => {
-    const draftPages = await strapi.services.page.find({
+  '*/1 * * * *': async () => {
+    // fetch posts to publish
+    const draftPostToPublish = await strapi.api.post.services.post.find({
       _publicationState: 'preview',
       publish_at_lt: new Date(),
     });
 
-    draftPages.forEach(page => {
-      strapi.services.page.update({id: page.id}, {
-        published_at: new Date(),
-        publish_at: null
-      })
+    const draftEventToPublish = await strapi.api.event.services.event.find({
+      _publicationState: 'preview',
+      publish_at_lt: new Date(),
     });
-  }
+
+    // update published_at of posts
+    draftPostToPublish.forEach(async post => {
+      await strapi.api.post.services.post.update(
+        { id: post.id },
+        { published_at: new Date() }
+      );
+    });
+
+    // update published_at of events
+    draftEventToPublish.forEach(async event => {
+      await strapi.api.event.services.event.update(
+        { id: event.id },
+        { published_at: new Date() }
+      );
+    });
+  },
 };

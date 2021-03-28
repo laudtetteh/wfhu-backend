@@ -16,25 +16,10 @@
       "repeatable": false,
       "component": "homepage.intro-cta"
     },
-    "row_of_reviews": {
-      "type": "component",
-      "repeatable": false,
-      "component": "homepage.reviews"
-    },
     "row_of_gifs": {
       "type": "component",
       "repeatable": true,
       "component": "homepage.row-of-gifs"
-    },
-    "row_of_events": {
-      "type": "component",
-      "repeatable": false,
-      "component": "homepage.row-of-events"
-    },
-    "row_of_posts": {
-      "type": "component",
-      "repeatable": false,
-      "component": "homepage.row-of-posts"
     }
   }
 }

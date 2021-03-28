@@ -1,73 +1,43 @@
+const { sanitizeEntity } = require('strapi-utils');
+
 module.exports = {
-  find: async (ctx) => {
-    let events;
+    find: async (ctx) => {
+        let entities;
 
-    if (ctx.query._q) {
+        if (ctx.query._q) {
+            entities = await strapi.api.event.services.event.search(ctx.query);
+        } else {
+            entities = await strapi.api.event.services.event.find(ctx.query);
+        }
 
-        // events = await strapi.api.event.services.event.search(ctx.query);
-        events = await strapi.api.event.services.event.search({})
-        .select({
-            id: 1,
-            name: 1,
-            slug: 1,
-            description: 1,
-            event_details: 1,
-            event_start: 1,
-            event_end: 1,
-            event_timezone: 1,
-            event_ended: 1,
-            keep_on_homepage: 1,
-            image: 1,
-            published_at: 1,
+        return entities.map(entity => {
+            const event = sanitizeEntity(entity, {
+                model: strapi.models.event,
+            });
+
+            if (event.previous_ ) {
+                delete event.previous_;
+            }
+            return event;
+        });
+    },
+
+    findOne: async (ctx) => {
+        const { id } = ctx.params;
+        let entity = await strapi.api.event.services.event.findOne({ id });
+
+        if (!entity) {
+            return ctx.notFound();
+        }
+
+        const event = sanitizeEntity(entity, {
+            model: strapi.models.event,
         });
 
-    } else {
+        if (event.previous_ ) {
+            delete event.previous_;
+        }
 
-        // events = await strapi.api.event.services.event.find(ctx.query);
-        events = await strapi.query('event').model.find({})
-        .select({
-            id: 1,
-            name: 1,
-            slug: 1,
-            description: 1,
-            event_details: 1,
-            event_start: 1,
-            event_end: 1,
-            event_timezone: 1,
-            event_ended: 1,
-            keep_on_homepage: 1,
-            image: 1,
-            published_at: 1,
-        });
+        return event;
     }
-
-    return events;
-  },
-
-  findOne: async (ctx) => {
-    const { id } = ctx.params;
-    // let event = await strapi.api.event.services.event.findOne({ id });
-
-    let event = await strapi.query('event').model.findOne({ id })
-        .select({
-            id: 1,
-            name: 1,
-            slug: 1,
-            description: 1,
-            event_details: 1,
-            event_start: 1,
-            event_end: 1,
-            event_timezone: 1,
-            event_ended: 1,
-            keep_on_homepage: 1,
-            image: 1,
-            published_at: 1,
-        });
-
-    if (!event) {
-      return ctx.notFound();
-    }
-
-    return event;
-  }
 };

@@ -558,9 +558,6 @@
                 "seo": {
                   "type": "component"
                 },
-                "previous_": {
-                  "type": "object"
-                },
                 "author_": {
                   "type": "object"
                 },
@@ -569,6 +566,9 @@
                 },
                 "excerpt": {
                   "type": "string"
+                },
+                "keep_on_homepage": {
+                  "type": "boolean"
                 },
                 "published_at": {
                   "type": "string"
@@ -597,9 +597,6 @@
             "items": {
               "type": "string"
             }
-          },
-          "author_": {
-            "type": "object"
           },
           "slug": {
             "type": "string"
