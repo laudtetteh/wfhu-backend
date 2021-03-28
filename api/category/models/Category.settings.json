@@ -17,8 +17,12 @@
       "unique": true
     },
     "posts": {
-      "collection": "post",
-      "via": "category"
+      "via": "category",
+      "collection": "post"
+    },
+    "author_": {
+      "private": true,
+      "type": "json"
     },
     "slug": {
       "type": "string"

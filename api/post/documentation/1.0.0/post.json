@@ -621,6 +621,9 @@
                   "type": "string"
                 }
               },
+              "author_": {
+                "type": "object"
+              },
               "slug": {
                 "type": "string"
               },
