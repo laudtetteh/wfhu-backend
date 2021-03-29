@@ -529,6 +529,10 @@
           "slug": {
             "type": "string"
           },
+          "publish_at": {
+            "type": "string",
+            "format": "date-time"
+          },
           "seo": {
             "type": "object",
             "required": [
@@ -676,6 +680,10 @@
           "slug": {
             "type": "string"
           },
+          "publish_at": {
+            "type": "string",
+            "format": "date-time"
+          },
           "seo": {
             "type": "object",
             "required": [
@@ -712,6 +720,9 @@
                 }
               }
             }
+          },
+          "author_": {
+            "type": "object"
           },
           "dynamic_fields": {
             "type": "array",
