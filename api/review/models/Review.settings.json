@@ -19,15 +19,15 @@
     "name": {
       "type": "string"
     },
-    "description_": {
-      "type": "text"
-    },
     "author_": {
       "private": true,
       "type": "json"
     },
     "description": {
       "type": "richtext"
+    },
+    "keep_on_homepage": {
+      "type": "boolean"
     }
   }
 }

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "03/28/2021 11:00:12 AM"
+    "x-generation-date": "03/30/2021 7:05:42 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -8232,48 +8232,6 @@
               }
             }
           },
-          "row_of_reviews": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "reviews": {
-                "required": [
-                  "id"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "description_": {
-                    "type": "string"
-                  },
-                  "author_": {
-                    "type": "object"
-                  },
-                  "description": {
-                    "type": "string"
-                  },
-                  "published_at": {
-                    "type": "string"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
           "row_of_gifs": {
             "type": "array",
             "items": {
@@ -8350,146 +8308,6 @@
                     "updated_by": {
                       "type": "string"
                     }
-                  }
-                }
-              }
-            }
-          },
-          "row_of_events": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "events": {
-                "required": [
-                  "id",
-                  "name",
-                  "event_start",
-                  "event_ended"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "slug": {
-                    "type": "string"
-                  },
-                  "image": {
-                    "type": "string"
-                  },
-                  "publish_at": {
-                    "type": "string"
-                  },
-                  "seo": {
-                    "type": "component"
-                  },
-                  "author_": {
-                    "type": "object"
-                  },
-                  "event_start": {
-                    "type": "string"
-                  },
-                  "event_end": {
-                    "type": "string"
-                  },
-                  "event_details": {
-                    "type": "string"
-                  },
-                  "event_ended": {
-                    "type": "boolean"
-                  },
-                  "event_timezone": {
-                    "type": "string"
-                  },
-                  "keep_on_homepage": {
-                    "type": "boolean"
-                  },
-                  "editing_guide": {
-                    "type": "string"
-                  },
-                  "description": {
-                    "type": "string"
-                  },
-                  "published_at": {
-                    "type": "string"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "row_of_posts": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "posts": {
-                "required": [
-                  "id",
-                  "name",
-                  "excerpt"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "slug": {
-                    "type": "string"
-                  },
-                  "description_": {
-                    "type": "string"
-                  },
-                  "image": {
-                    "type": "string"
-                  },
-                  "publish_at": {
-                    "type": "string"
-                  },
-                  "category": {
-                    "type": "string"
-                  },
-                  "seo": {
-                    "type": "component"
-                  },
-                  "author_": {
-                    "type": "object"
-                  },
-                  "description": {
-                    "type": "string"
-                  },
-                  "excerpt": {
-                    "type": "string"
-                  },
-                  "keep_on_homepage": {
-                    "type": "boolean"
-                  },
-                  "published_at": {
-                    "type": "string"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
                   }
                 }
               }
@@ -8593,48 +8411,6 @@
               }
             }
           },
-          "row_of_reviews": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "reviews": {
-                "required": [
-                  "id"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "description_": {
-                    "type": "string"
-                  },
-                  "author_": {
-                    "type": "object"
-                  },
-                  "description": {
-                    "type": "string"
-                  },
-                  "published_at": {
-                    "type": "string"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
           "row_of_gifs": {
             "type": "array",
             "items": {
@@ -8711,146 +8487,6 @@
                     "updated_by": {
                       "type": "string"
                     }
-                  }
-                }
-              }
-            }
-          },
-          "row_of_events": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "events": {
-                "required": [
-                  "id",
-                  "name",
-                  "event_start",
-                  "event_ended"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "slug": {
-                    "type": "string"
-                  },
-                  "image": {
-                    "type": "string"
-                  },
-                  "publish_at": {
-                    "type": "string"
-                  },
-                  "seo": {
-                    "type": "component"
-                  },
-                  "author_": {
-                    "type": "object"
-                  },
-                  "event_start": {
-                    "type": "string"
-                  },
-                  "event_end": {
-                    "type": "string"
-                  },
-                  "event_details": {
-                    "type": "string"
-                  },
-                  "event_ended": {
-                    "type": "boolean"
-                  },
-                  "event_timezone": {
-                    "type": "string"
-                  },
-                  "keep_on_homepage": {
-                    "type": "boolean"
-                  },
-                  "editing_guide": {
-                    "type": "string"
-                  },
-                  "description": {
-                    "type": "string"
-                  },
-                  "published_at": {
-                    "type": "string"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "row_of_posts": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "posts": {
-                "required": [
-                  "id",
-                  "name",
-                  "excerpt"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "slug": {
-                    "type": "string"
-                  },
-                  "description_": {
-                    "type": "string"
-                  },
-                  "image": {
-                    "type": "string"
-                  },
-                  "publish_at": {
-                    "type": "string"
-                  },
-                  "category": {
-                    "type": "string"
-                  },
-                  "seo": {
-                    "type": "component"
-                  },
-                  "author_": {
-                    "type": "object"
-                  },
-                  "description": {
-                    "type": "string"
-                  },
-                  "excerpt": {
-                    "type": "string"
-                  },
-                  "keep_on_homepage": {
-                    "type": "boolean"
-                  },
-                  "published_at": {
-                    "type": "string"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
                   }
                 }
               }
@@ -9528,11 +9164,11 @@
           "name": {
             "type": "string"
           },
-          "description_": {
-            "type": "string"
-          },
           "description": {
             "type": "string"
+          },
+          "keep_on_homepage": {
+            "type": "boolean"
           },
           "published_at": {
             "type": "string",
@@ -9545,14 +9181,14 @@
           "name": {
             "type": "string"
           },
-          "description_": {
-            "type": "string"
-          },
           "author_": {
             "type": "object"
           },
           "description": {
             "type": "string"
+          },
+          "keep_on_homepage": {
+            "type": "boolean"
           },
           "published_at": {
             "type": "string",

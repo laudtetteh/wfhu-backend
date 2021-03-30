@@ -525,11 +525,11 @@
           "name": {
             "type": "string"
           },
-          "description_": {
-            "type": "string"
-          },
           "description": {
             "type": "string"
+          },
+          "keep_on_homepage": {
+            "type": "boolean"
           },
           "published_at": {
             "type": "string",
@@ -542,14 +542,14 @@
           "name": {
             "type": "string"
           },
-          "description_": {
-            "type": "string"
-          },
           "author_": {
             "type": "object"
           },
           "description": {
             "type": "string"
+          },
+          "keep_on_homepage": {
+            "type": "boolean"
           },
           "published_at": {
             "type": "string",
