@@ -10,21 +10,23 @@ module.exports = {
             entities = await strapi.api.post.services.post.find(ctx.query);
         }
 
-        return entities.map(entity => {
-            const post = sanitizeEntity(entity, {
-                model: strapi.models.post,
-            });
+        return entities;
 
-            if( post.previous_ ) {
-                delete post.previous_;
-            }
+        // return entities.map(entity => {
+        //     const post = sanitizeEntity(entity, {
+        //         model: strapi.models.post,
+        //     });
 
-            if( post.category && post.category.previous_) {
-                delete post.category.previous_;
-            }
+        //     if( post.previous_ ) {
+        //         delete post.previous_;
+        //     }
 
-            return post;
-        });
+        //     if( post.category && post.category.previous_) {
+        //         delete post.category.previous_;
+        //     }
+
+        //     return post;
+        // });
     },
 
     findOne: async (ctx) => {
@@ -35,17 +37,19 @@ module.exports = {
             return ctx.notFound();
         }
 
-        const post = sanitizeEntity(entity, {
-            model: strapi.models.post,
-        });
+        return entity;
+        
+        // const post = sanitizeEntity(entity, {
+        //     model: strapi.models.post,
+        // });
 
-        if( post.category && post.category.previous_) {
-            delete post.category.previous_;
-        }
+        // if( post.category && post.category.previous_) {
+        //     delete post.category.previous_;
+        // }
 
-        if(post.previous_ ) {
-            delete post.previous_;
-        }
+        // if(post.previous_ ) {
+        //     delete post.previous_;
+        // }
 
         return post;
     }

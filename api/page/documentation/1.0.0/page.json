@@ -721,9 +721,6 @@
               }
             }
           },
-          "author_": {
-            "type": "object"
-          },
           "dynamic_fields": {
             "type": "array",
             "items": {

@@ -10,16 +10,18 @@ module.exports = {
             entities = await strapi.api.event.services.event.find(ctx.query);
         }
 
-        return entities.map(entity => {
-            const event = sanitizeEntity(entity, {
-                model: strapi.models.event,
-            });
+        return entities;
 
-            if (event.previous_ ) {
-                delete event.previous_;
-            }
-            return event;
-        });
+        // return entities.map(entity => {
+        //     const event = sanitizeEntity(entity, {
+        //         model: strapi.models.event,
+        //     });
+
+        //     if (event.previous_ ) {
+        //         delete event.previous_;
+        //     }
+        //     return event;
+        // });
     },
 
     findOne: async (ctx) => {
@@ -30,14 +32,16 @@ module.exports = {
             return ctx.notFound();
         }
 
-        const event = sanitizeEntity(entity, {
-            model: strapi.models.event,
-        });
+        return entity;
+        
+        // const event = sanitizeEntity(entity, {
+        //     model: strapi.models.event,
+        // });
 
-        if (event.previous_ ) {
-            delete event.previous_;
-        }
+        // if (event.previous_ ) {
+        //     delete event.previous_;
+        // }
 
-        return event;
+        // return event;
     }
 };

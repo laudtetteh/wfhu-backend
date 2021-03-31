@@ -42,10 +42,6 @@
       "required": false,
       "repeatable": false
     },
-    "author_": {
-      "private": true,
-      "type": "json"
-    },
     "event_start": {
       "type": "datetime",
       "required": true

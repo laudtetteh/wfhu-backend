@@ -781,9 +781,6 @@
               }
             }
           },
-          "author_": {
-            "type": "object"
-          },
           "event_start": {
             "type": "string",
             "format": "date-time"

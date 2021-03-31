@@ -543,9 +543,6 @@
                 "slug": {
                   "type": "string"
                 },
-                "description_": {
-                  "type": "string"
-                },
                 "image": {
                   "type": "string"
                 },
@@ -557,9 +554,6 @@
                 },
                 "seo": {
                   "type": "component"
-                },
-                "author_": {
-                  "type": "object"
                 },
                 "description": {
                   "type": "string"

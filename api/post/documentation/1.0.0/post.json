@@ -530,9 +530,6 @@
           "slug": {
             "type": "string"
           },
-          "description_": {
-            "type": "string"
-          },
           "image": {
             "required": [
               "id",
@@ -703,9 +700,6 @@
           "slug": {
             "type": "string"
           },
-          "description_": {
-            "type": "string"
-          },
           "publish_at": {
             "type": "string",
             "format": "date-time"
@@ -751,9 +745,6 @@
                 }
               }
             }
-          },
-          "author_": {
-            "type": "object"
           },
           "description": {
             "type": "string"
