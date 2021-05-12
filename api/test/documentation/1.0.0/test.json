@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/reviews": {
+    "/tests": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Review"
+                    "$ref": "#/components/schemas/Test"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Review"
+          "Test"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Review"
+                  "$ref": "#/components/schemas/Test"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Review"
+          "Test"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewReview"
+                "$ref": "#/components/schemas/NewTest"
               }
             }
           }
         }
       }
     },
-    "/reviews/count": {
+    "/tests/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Review"
+          "Test"
         ],
         "parameters": []
       }
     },
-    "/reviews/{id}": {
+    "/tests/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Review"
+                  "$ref": "#/components/schemas/Test"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Review"
+          "Test"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Review"
+                  "$ref": "#/components/schemas/Test"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Review"
+          "Test"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewReview"
+                "$ref": "#/components/schemas/NewTest"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Review"
+          "Test"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Review": {
+      "Test": {
         "required": [
           "id"
         ],
@@ -522,14 +522,8 @@
           "id": {
             "type": "string"
           },
-          "name": {
+          "title": {
             "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "keep_on_homepage": {
-            "type": "boolean"
           },
           "published_at": {
             "type": "string",
@@ -537,16 +531,10 @@
           }
         }
       },
-      "NewReview": {
+      "NewTest": {
         "properties": {
-          "name": {
+          "title": {
             "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "keep_on_homepage": {
-            "type": "boolean"
           },
           "published_at": {
             "type": "string",
@@ -564,7 +552,7 @@
   },
   "tags": [
     {
-      "name": "Review"
+      "name": "Test"
     }
   ]
 }

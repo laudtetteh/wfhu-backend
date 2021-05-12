@@ -19,10 +19,6 @@
     "name": {
       "type": "string"
     },
-    "author_": {
-      "private": true,
-      "type": "json"
-    },
     "description": {
       "type": "richtext"
     },
