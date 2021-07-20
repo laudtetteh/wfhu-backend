@@ -17,3 +17,6 @@ In the project directory, you can run:
 ### `yarn develop`
 `yarn develop` starts the server in developement environment and builds the administration panel.
 Open [http://localhost:1337/admin](http://localhost:1337/admin) to view it in the browser.
+
+### `git push heroku main`
+`git push heroku main` deploys the current local version of the app to the Heroky main branch

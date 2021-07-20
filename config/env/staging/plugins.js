@@ -17,17 +17,17 @@ module.exports = ({ env }) => ({
   email: {
     provider: 'nodemailer',
     providerOptions: {
-      host: env('EM_SMTP_HOST', "smtp.elasticemail.com"),
-      port: env('EM_SMTP_PORT', 2525),
+      host: env('EM_SMTP_HOST'),
+      port: env('EM_SMTP_PORT'),
       auth: {
-        user: env('EM_SMTP_USERNAME', "elisabeth@wfhuniv.com"),
-        pass: env('EM_SMTP_PASSWORD', "0C5F923ECE74175A020AB94F7BE6975F8E7D"),
+        user: env('EM_SMTP_USERNAME'),
+        pass: env('EM_SMTP_PASSWORD'),
       },
       // ... any custom nodemailer options
     },
     settings: {
-      defaultFrom: env('DEFAULT_FROM', "vendors@studiotenfour.com"),
-      defaultReplyTo: env('DEFAULT_REPLY_TO', "vendors@studiotenfour.com"),
+      defaultFrom: env('DEFAULT_FROM'),
+      defaultReplyTo: env('DEFAULT_REPLY_TO'),
     },
   },
 
